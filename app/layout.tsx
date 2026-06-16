@@ -18,10 +18,11 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   title: {
-    default: "Servite Order",
-    template: "%s | Servite Order",
+    default: "Secular Order of the Servants of Mary (OSSM)",
+    template: "%s | OSSM",
   },
-  description: "Ordo Servorum Mariae — Order of Friars Servants of Mary",
+  description:
+    "Secular Order of the Servants of Mary (OSSM) — Heirs to an eight-century Servite charism of prayer, fraternity, and compassionate service.",
 };
 
 export default function RootLayout({

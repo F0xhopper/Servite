@@ -3,30 +3,27 @@ import Image from "next/image";
 const pillars = [
   {
     roman: "I",
-    latin: "Oratio",
-    title: "Prayer",
-    tagline: "The contemplative root",
-    body: "Prayer is not preparation for our mission — it is our mission. We enter Mary's silence at the foot of the Cross and let her sorrow school our hearts in what love truly costs. In stillness, we become servants.",
+    title: "Marian Inspiration",
+    tagline: "Mary, model of the servant",
+    body: "The constant wellspring of Secular Servite life is Mary — venerated as Virgin at the Annunciation, Mother at the Nativity, intercessor at Cana, sharer of our suffering at the Cross, and Bride of the Spirit at Pentecost. Above all she is honoured as the Virgin of Sorrows: her compassionate presence in Christ's Passion makes her the perfect model of discipleship, simplicity, and total surrender to God. Daily acts of reverence — the Servite Rosary of the Seven Sorrows, the Vigil of Our Lady — keep this inspiration alive.",
     image: "/images/vergine-addolarata.jpg",
     alt: "Vergine Addolorata — Our Lady of Sorrows",
     reverse: false,
   },
   {
     roman: "II",
-    latin: "Fraternitas",
-    title: "Community",
-    tagline: "Fraternal charity",
-    body: "The Seven Holy Founders fled the world not to be alone, but to be together in God. We inherit their bond — a brotherhood and sisterhood of shared pilgrimage, mutual accountability, and love that endures through the Cross.",
+    title: "Fraternal Life",
+    tagline: "One mind, one heart",
+    body: "Imitating the first community of the apostles, Secular Servites are called to live with one mind and one heart. The Seven Holy Founders were bound together in the Lord's name — and that bond is the Order's defining mark. Gathered in local fraternities, members share an inner search for God, docility to the Holy Spirit, and mutual support in prayer, study, and fellowship. In a world broken by hatred and division, Servants of Mary are sent to be witnesses of unity and reconciliation.",
     image: "/images/founders_vision.jpg",
     alt: "Vision of the Seven Holy Founders",
     reverse: true,
   },
   {
     roman: "III",
-    latin: "Ministerium",
-    title: "Service",
-    tagline: "Love made visible",
-    body: "What prayer receives and community forges is poured out in service. We carry Mary's compassion into the places of suffering she would seek first — the poor, the grieving, the forgotten at the margins of the world.",
+    title: "Charitable Service",
+    tagline: "Compassion made flesh",
+    body: "As Mary stood at the foot of the Cross, Secular Servites are called to stand beside the countless crosses where Christ is still being crucified — among the poor, the abandoned, the imprisoned, refugees, and victims of injustice. This is not merely social action but redemptive cooperation: taking up the cross each day, they become bearers of the freedom that frees creation from suffering. Following the great figures of the Order, they bring comfort wherever human dignity is wounded.",
     image: "/images/Rogier_van_der_Weyden_Crucifixion.jpg",
     alt: "The Crucifixion — Rogier van der Weyden",
     reverse: false,
@@ -39,7 +36,7 @@ export function CharismSection() {
       {/* Section header */}
       <div className="px-6 py-20 text-center sm:px-10 sm:py-24 lg:px-16 lg:py-28">
         <p className="mb-8 font-display text-sm tracking-[0.5em] text-gold/40">✠</p>
-        <h2 className="mb-5 font-display text-5xl font-normal tracking-wide text-white sm:text-6xl lg:text-7xl">
+        <h2 className="mb-5 font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Our Charism
         </h2>
         <div className="mx-auto h-px w-10 bg-gold/20" />
@@ -88,18 +85,8 @@ export function CharismSection() {
               ].join(" ")}
             >
               <div className="max-w-[420px]">
-                {/* Ordinal + Latin */}
-                <div className="mb-4 flex items-baseline gap-3">
-                  <span className="font-display text-[11px] tracking-[0.5em] text-gold/45 uppercase">
-                    {pillar.roman}
-                  </span>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/20">
-                    {pillar.latin}
-                  </span>
-                </div>
-
                 {/* Title */}
-                <h3 className="mb-5 font-display text-5xl font-normal leading-none text-white lg:text-[3.25rem]">
+                <h3 className="mb-5 font-display text-3xl font-normal leading-none text-white sm:text-4xl">
                   {pillar.title}
                 </h3>
 
@@ -112,7 +99,7 @@ export function CharismSection() {
                 </p>
 
                 {/* Body */}
-                <p className="text-[15px] leading-[1.95] text-white/50">
+                <p className="text-[15px] leading-[1.9] text-white/50">
                   {pillar.body}
                 </p>
               </div>

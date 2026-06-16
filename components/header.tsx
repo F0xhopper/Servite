@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const links = [
-  { label: "Who We Are", href: "/who-we-are" },
+  { label: "Our Story", href: "/our-story" },
   { label: "Spirituality", href: "/spirituality" },
   { label: "Saints", href: "/saints" },
   { label: "Events", href: "/events" },
@@ -25,15 +25,23 @@ export function Header() {
     <>
       <header className="sticky top-0 z-50 w-full">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-          <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
             <Image
               src="/images/servite_logo.png"
-              alt="Servite Order"
+              alt="Secular Order of the Servants of Mary"
               width={22}
               height={40}
               style={{ width: "auto" }}
               priority
             />
+            <span className="hidden flex-col sm:flex">
+              <span className="text-[11px] font-light tracking-[0.18em] text-white/70">
+                Secular Order of the Servants of Mary
+              </span>
+              <span className="text-[9px] tracking-[0.35em] text-gold/40 uppercase">
+                OSSM
+              </span>
+            </span>
           </Link>
 
           {/* Desktop nav */}
