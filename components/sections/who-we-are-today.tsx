@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const pillars = [
   {
@@ -38,11 +39,21 @@ export function WhoWeAreTodaySection() {
               <h3 className="mb-3 text-[12px] font-semibold uppercase tracking-[0.25em] text-gold/70">
                 {p.label}
               </h3>
-              <p className="text-[15px] leading-[1.9] text-white/55">
+              <p className="text-[15px] leading-[1.9] text-white/70">
                 {p.body}
               </p>
             </div>
           ))}
+
+          {/* Single section link */}
+          <div className="flex justify-end">
+            <Link
+              href="/about"
+              className="text-[11px] tracking-[0.25em] text-gold/40 uppercase transition-colors hover:text-gold/70"
+            >
+              About the Order →
+            </Link>
+          </div>
         </div>
 
         {/* Right — image */}

@@ -99,7 +99,7 @@ export function CharismSection() {
                 </p>
 
                 {/* Body */}
-                <p className="text-[15px] leading-[1.9] text-white/50">
+                <p className="text-[15px] leading-[1.9] text-white/65">
                   {pillar.body}
                 </p>
               </div>

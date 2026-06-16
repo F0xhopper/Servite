@@ -15,7 +15,7 @@ export function HeroSection() {
           <p className="mb-6 text-lg italic tracking-wider text-gold/70">
             Standing with Mary at the Foot of the Cross
           </p>
-          <p className="text-[15px] leading-[1.9] text-white/40">
+          <p className="text-[15px] leading-[1.9] text-white/60">
             Heirs to an eight-century vigil begun by the Seven Holy Founders, the Secular Order of the Servants of Mary invites lay Catholics to live the ancient Servite charism of prayer, fraternity, and compassionate service in the heart of daily life.
           </p>
         </div>

@@ -1,5 +1,9 @@
 import Image from "next/image";
 
+const bodyText = "text-[15px] leading-[1.9] text-white/65";
+const yearClass = "mb-2 font-display text-[3.2rem] font-light leading-none tracking-tight text-white/80 sm:text-[3.8rem]";
+const categoryClass = "mb-6 font-display text-[11px] uppercase tracking-[0.5em] text-gold/45";
+
 export function OurRootsSection() {
   return (
     <section className="bg-black">
@@ -17,19 +21,15 @@ export function OurRootsSection() {
 
           {/* ── Column 1: 1233 — foundational, wide, image at bottom ── */}
           <div className="border-t border-white/10 pt-8">
-            <p className="mb-2 font-display text-[3.2rem] font-light leading-none tracking-tight text-white/80 sm:text-[3.8rem]">
-              1233
-            </p>
-            <p className="mb-6 font-display text-[11px] uppercase tracking-[0.5em] text-gold/45">
-              Origins &amp; Early Lay Communities
-            </p>
-            <p className="mb-3 text-[15px] leading-[1.9] text-white/45">
+            <p className={yearClass}>1233</p>
+            <p className={categoryClass}>Origins &amp; Early Lay Communities</p>
+            <p className={`mb-3 ${bodyText}`}>
               Seven wealthy Florentine merchants withdrew from public life to live in prayer and penance dedicated to the Virgin Mary. Their community — officially approved in 1256 as the Order of Friars Servants of Mary — drew lay men, women, and married couples from its earliest years.
             </p>
-            <p className="mb-3 text-[15px] leading-[1.9] text-white/45">
+            <p className={`mb-3 ${bodyText}`}>
               These early participants were not yet a formal order. They were oblates, confraternity members, and associates living ordinary city and family life while remaining spiritually linked to the friars.
             </p>
-            <p className="mb-10 text-[15px] leading-[1.9] text-white/45">
+            <p className={`mb-10 ${bodyText}`}>
               Local in character and varied by priory, with no unified rule, their communities shared a deep devotion to Our Lady of Sorrows. They are the direct ancestors of today's OSSM.
             </p>
             <div className="relative aspect-[4/3] overflow-hidden">
@@ -47,37 +47,29 @@ export function OurRootsSection() {
 
             {/* Entry A */}
             <div className="border-t border-white/10 pt-8">
-              <p className="mb-2 font-display text-[3.2rem] font-light leading-none tracking-tight text-white/80 sm:text-[3.8rem]">
-                1424
-              </p>
-              <p className="mb-6 font-display text-[11px] uppercase tracking-[0.5em] text-gold/45">
-                Formal Recognition
-              </p>
-              <p className="mb-3 text-[15px] leading-[1.9] text-white/45">
+              <p className={yearClass}>1424</p>
+              <p className={categoryClass}>Formal Recognition</p>
+              <p className={`mb-3 ${bodyText}`}>
                 Pope Martin V, through the Bull{" "}
                 <em>Sedis apostolicae providentia</em>, officially recognized lay
                 Servites as a structured part of the Servite family — the Third Order.
               </p>
-              <p className="mb-3 text-[15px] leading-[1.9] text-white/45">
+              <p className={`mb-3 ${bodyText}`}>
                 Lay people in the world now held an ecclesial identity and early forms of governance, alongside the Third Orders of the Franciscans, Dominicans, Carmelites, and Augustinians.
               </p>
-              <p className="text-[15px] leading-[1.9] text-white/45">
+              <p className={bodyText}>
                 The name "Third Order of Servites" became common across Europe from this point forward.
               </p>
             </div>
 
             {/* Entry B */}
             <div className="border-t border-white/10 pt-8">
-              <p className="mb-2 font-display text-[3.2rem] font-light leading-none tracking-tight text-white/80 sm:text-[3.8rem]">
-                1500s – 1900s
-              </p>
-              <p className="mb-6 font-display text-[11px] uppercase tracking-[0.5em] text-gold/45">
-                Growth &amp; Global Expansion
-              </p>
-              <p className="mb-3 text-[15px] leading-[1.9] text-white/45">
+              <p className={yearClass}>1500s – 1900s</p>
+              <p className={categoryClass}>Growth &amp; Global Expansion</p>
+              <p className={`mb-3 ${bodyText}`}>
                 The Prior General took an active role animating secular fraternities, while devotion deepened around Our Lady of Sorrows and the Seven Sorrows.
               </p>
-              <p className="text-[15px] leading-[1.9] text-white/45">
+              <p className={bodyText}>
                 Through the nineteenth century, Servite missionary activity carried the Third Order to the Americas, Africa, and Asia — though no single universal rule yet unified these growing communities.
               </p>
             </div>
@@ -88,26 +80,22 @@ export function OurRootsSection() {
           <div className="lg:pt-12">
             <div className="relative mb-8 aspect-[3/4] overflow-hidden">
               <Image
-                src="/images/mater-dolorosa.jpg"
-                alt="Our Lady of Sorrows"
+                src="/images/Vatican II.jpg"
+                alt="Second Vatican Council"
                 fill
                 className="object-cover brightness-[0.55] saturate-[0.3]"
               />
             </div>
             <div className="border-t border-white/10 pt-8">
-              <p className="mb-2 font-display text-[3.2rem] font-light leading-none tracking-tight text-white/80 sm:text-[3.8rem]">
-                1962 – 1995
-              </p>
-              <p className="mb-6 font-display text-[11px] uppercase tracking-[0.5em] text-gold/45">
-                Vatican II &amp; The Rule Renewed
-              </p>
-              <p className="mb-3 text-[15px] leading-[1.9] text-white/45">
+              <p className={yearClass}>1962 – 1995</p>
+              <p className={categoryClass}>Vatican II &amp; The Rule Renewed</p>
+              <p className={`mb-3 ${bodyText}`}>
                 The Second Vatican Council called for the renewal of lay vocations. The Servite Third Order was re-evaluated to reflect modern lay life and a clearer identity within the Servite family.
               </p>
-              <p className="mb-3 text-[15px] leading-[1.9] text-white/45">
+              <p className={`mb-3 ${bodyText}`}>
                 A new Rule of Life was approved by the Apostolic See in 1987. After a series of revisions, the definitive text was confirmed by the Holy See on 29 April 1995.
               </p>
-              <p className="text-[15px] leading-[1.9] text-white/45">
+              <p className={bodyText}>
                 Today the Secular Order of the Servants of Mary — the OSSM — is a worldwide lay movement of men and women living in ordinary society, fully part of the Servite spiritual family.
               </p>
             </div>

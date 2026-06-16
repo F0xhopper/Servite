@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { EB_Garamond, Cinzel } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const ebGaramond = EB_Garamond({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className="min-h-dvh antialiased">
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
