@@ -3,6 +3,7 @@ import Link from "next/link";
 export function CtaBandSection() {
   return (
     <section className="bg-black px-6 py-24 sm:px-10 sm:py-28 lg:px-16 lg:py-32">
+
       <div className="mx-auto max-w-2xl text-center">
 
         <div className="mb-10 h-px bg-gold/[0.12]" />

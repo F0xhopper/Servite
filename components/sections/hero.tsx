@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <section className="relative -mt-16 flex flex-col overflow-hidden lg:h-dvh lg:flex-row">
+    <section className="relative -mt-24 flex flex-col overflow-hidden lg:h-dvh lg:flex-row">
       {/* Text panel */}
-      <div className="flex w-full flex-col justify-center bg-black px-6 pb-12 pt-24 sm:px-10 sm:pt-28 lg:w-[42%] lg:px-16 lg:pb-0 lg:pt-16">
+      <div className="flex w-full flex-col justify-center bg-black px-6 pb-12 pt-28 sm:px-10 sm:pt-32 lg:w-[48%] lg:px-16 lg:pb-0 lg:pt-32">
         <div className="max-w-sm">
           <h1 className="mb-4 text-5xl font-light leading-tight tracking-wide text-white sm:text-6xl lg:text-7xl">
             Servants
@@ -24,8 +24,8 @@ export function HeroSection() {
       {/* Image panel */}
       <div className="relative h-72 w-full sm:h-96 md:h-[480px] lg:h-full lg:flex-1">
         <Image
-          src="/images/founders_vision.jpg"
-          alt="Vision of the Seven Holy Founders"
+          src="/images/mater-dolorosa.jpg"
+          alt="Mater Dolorosa, Our Lady of Sorrows"
           fill
           className="object-cover object-center brightness-[0.75] saturate-[0.55]"
           priority

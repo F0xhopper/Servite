@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -20,18 +20,29 @@ const links = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full">
-        <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
+      <header
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+          scrolled ? "bg-black/90 backdrop-blur-sm shadow-[0_1px_0_0_rgba(255,255,255,0.06)]" : ""
+        }`}
+      >
+        <div className="mx-auto flex h-24 max-w-6xl items-center justify-between px-6">
           <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
             <Image
               src="/images/servite_logo.png"
               alt="Secular Order of the Servants of Mary"
-              width={40}
-              height={72}
-              style={{ width: "auto" }}
+              width={52}
+              height={62}
+              style={{ width: "auto", height: "62px" }}
               priority
             />
             <span className="hidden flex-col sm:flex">
