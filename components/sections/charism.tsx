@@ -1,29 +1,27 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const pillars = [
   {
-    roman: "I",
     title: "Marian Inspiration",
     tagline: "Mary, model of the servant",
-    body: "The constant wellspring of Secular Servite life is Mary — venerated as Virgin at the Annunciation, Mother at the Nativity, intercessor at Cana, sharer of our suffering at the Cross, and Bride of the Spirit at Pentecost. Above all she is honoured as the Virgin of Sorrows: her compassionate presence in Christ's Passion makes her the perfect model of discipleship, simplicity, and total surrender to God. Daily acts of reverence — the Servite Rosary of the Seven Sorrows, the Vigil of Our Lady — keep this inspiration alive.",
+    body: "The constant wellspring of Secular Servite life is Mary — venerated as Virgin at the Annunciation, Mother at the Nativity, intercessor at Cana, sharer of our suffering at the Cross, and Bride of the Spirit at Pentecost. Above all she is honoured as the Virgin of Sorrows: her compassionate presence in Christ's Passion makes her the perfect model of discipleship, simplicity, and total surrender to God. She is not a distant icon but a living presence — the measure against which every Servant of Mary asks how deeply they have given themselves to God.",
     image: "/images/vergine-addolarata.jpg",
     alt: "Vergine Addolorata — Our Lady of Sorrows",
     reverse: false,
   },
   {
-    roman: "II",
     title: "Fraternal Life",
     tagline: "One mind, one heart",
-    body: "Imitating the first community of the apostles, Secular Servites are called to live with one mind and one heart. The Seven Holy Founders were bound together in the Lord's name — and that bond is the Order's defining mark. Gathered in local fraternities, members share an inner search for God, docility to the Holy Spirit, and mutual support in prayer, study, and fellowship. In a world broken by hatred and division, Servants of Mary are sent to be witnesses of unity and reconciliation.",
+    body: "Imitating the first community of the apostles, Secular Servites are called to live with one mind and one heart. The Seven Holy Founders were bound together in the Lord's name — and that bond is the Order's defining mark. This call to unity is not merely social but mystical: a participation in the communion of love that is the Church itself. In a world broken by hatred and division, Servants of Mary are sent to be visible signs that another way of belonging is possible.",
     image: "/images/founders_vision.jpg",
     alt: "Vision of the Seven Holy Founders",
     reverse: true,
   },
   {
-    roman: "III",
     title: "Charitable Service",
     tagline: "Compassion made flesh",
-    body: "As Mary stood at the foot of the Cross, Secular Servites are called to stand beside the countless crosses where Christ is still being crucified — among the poor, the abandoned, the imprisoned, refugees, and victims of injustice. This is not merely social action but redemptive cooperation: taking up the cross each day, they become bearers of the freedom that frees creation from suffering. Following the great figures of the Order, they bring comfort wherever human dignity is wounded.",
+    body: "Mary's vigil at the Cross was not passive — it was an act of total, costly love. Secular Servites inherit that posture: they are a people called to remain. Where others move on, they stay. Where suffering is hidden, they look. The Order asks not for grand gestures but for a consistent, incarnate compassion — rooted in the conviction that every wounded person is a place where Christ is still being crucified, and where Mary still stands.",
     image: "/images/Rogier_van_der_Weyden_Crucifixion.jpg",
     alt: "The Crucifixion — Rogier van der Weyden",
     reverse: false,
@@ -35,18 +33,23 @@ export function CharismSection() {
     <section className="bg-black">
       {/* Section header */}
       <div className="px-6 py-20 text-center sm:px-10 sm:py-24 lg:px-16 lg:py-28">
-        <p className="mb-8 font-display text-sm tracking-[0.5em] text-gold/40">✠</p>
         <h2 className="mb-5 font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Our Charism
         </h2>
         <div className="mx-auto h-px w-10 bg-gold/20" />
+        <Link
+          href="/about"
+          className="mt-8 inline-block text-[11px] tracking-[0.25em] text-gold/40 uppercase transition-colors hover:text-gold/70"
+        >
+          About the Order →
+        </Link>
       </div>
 
       {/* Pillar rows */}
       <div className="divide-y divide-white/[0.05]">
         {pillars.map((pillar) => (
           <div
-            key={pillar.roman}
+            key={pillar.title}
             className="grid min-h-[480px] grid-cols-1 lg:grid-cols-2 lg:min-h-[520px]"
           >
             {/* Image column */}

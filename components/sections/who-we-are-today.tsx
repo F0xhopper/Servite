@@ -22,7 +22,6 @@ export function WhoWeAreTodaySection() {
 
       {/* Header */}
       <div className="mb-14 lg:mb-16">
-        <p className="mb-5 font-display text-sm tracking-[0.5em] text-gold/40">✠</p>
         <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Who We Are Today
         </h2>

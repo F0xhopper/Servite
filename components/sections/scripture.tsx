@@ -8,7 +8,6 @@ export function ScriptureSection() {
 
         {/* Verse — left */}
         <div className="flex-1 text-center lg:text-left">
-          <p className="mb-10 font-display text-sm tracking-[0.5em] text-gold/40">✠</p>
           <blockquote className="font-display text-2xl font-normal leading-relaxed tracking-wide text-white sm:text-3xl lg:text-[2.5rem] lg:leading-relaxed">
             "And thy own soul a sword shall pierce, that, out of many hearts, thoughts may be revealed."
           </blockquote>

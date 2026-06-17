@@ -45,7 +45,7 @@ export function PatronSaintsSection() {
 
       {/* Header */}
       <div className="mb-20 lg:mb-28">
-        <p className="mb-4 font-display text-xs tracking-[0.5em] text-gold/40">✠ Our Saints</p>
+        <p className="mb-4 font-display text-xs tracking-[0.5em] text-gold/40">Our Saints</p>
         <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Patron Saints
         </h2>
