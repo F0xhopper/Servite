@@ -34,8 +34,8 @@ const saints: Saint[] = [
 ];
 
 const portraitClass = "object-cover brightness-[0.5] saturate-[0.3]";
-const bodyClass = "text-[12px] leading-[1.8] text-white/55";
-const titleClass = "mb-4 text-[12px] italic leading-snug text-gold/50";
+const bodyClass = "text-[14px] leading-[1.8] text-white/78";
+const titleClass = "mb-4 text-[13px] italic leading-snug text-gold/65";
 
 export function PatronSaintsSection() {
   const [founders, philip, peregrine] = saints;
@@ -45,12 +45,11 @@ export function PatronSaintsSection() {
 
       {/* Header */}
       <div className="mb-20 lg:mb-28">
-        <p className="mb-4 font-display text-xs tracking-[0.5em] text-gold/40">Our Saints</p>
         <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Patron Saints
         </h2>
         <div className="mt-5 h-px w-10 bg-gold/20" />
-        <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/60">
+        <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/75">
           The canonised sons and daughters of the Servite family — each a living
           icon of the Order's charism of prayer, fraternity, and compassionate
           service.
@@ -95,7 +94,7 @@ export function PatronSaintsSection() {
 
         {/* Single section link */}
         <div className="mt-20 flex justify-end lg:mt-28">
-          <Link href="/saints" className="text-[11px] tracking-[0.25em] text-gold/40 uppercase transition-colors hover:text-gold/70">
+          <Link href="/saints" className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold">
             All Saints →
           </Link>
         </div>

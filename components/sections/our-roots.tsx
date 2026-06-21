@@ -1,19 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const bodyText = "text-[15px] leading-[1.9] text-white/65";
-const yearClass = "mb-2 font-display text-[3.2rem] font-light leading-none tracking-tight text-white/80 sm:text-[3.8rem]";
-const categoryClass = "mb-4 font-display text-[11px] uppercase tracking-[0.5em] text-gold/45";
+const bodyText = "text-[15px] leading-[1.9] text-white/80";
+const yearClass = "mb-2 font-display text-[3.2rem] font-light leading-none tracking-tight text-white/90 sm:text-[3.8rem]";
+const categoryClass = "mb-4 font-display text-[11px] uppercase tracking-[0.5em] text-gold/60";
 
 export function OurRootsSection() {
   return (
     <section className="bg-black">
       {/* Section header */}
       <div className="mx-auto max-w-[1400px] px-8 pb-14 pt-20 sm:px-12 lg:px-16 lg:pt-28">
-        <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl">
+        <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Our Roots
         </h2>
-        <div className="mt-5 h-px w-8 bg-gold/20" />
+        <div className="mt-5 h-px w-10 bg-gold/20" />
       </div>
 
       {/* Asymmetric editorial grid */}
@@ -73,17 +73,21 @@ export function OurRootsSection() {
               <p className={`mb-8 ${bodyText}`}>
                 A new Rule of Life was approved by the Apostolic See in 1987 and, after further revision, definitively confirmed by the Holy See on 29 April 1995. The order was formally renamed the Secular Order of the Servants of Mary — the OSSM — a worldwide movement of lay men and women living in ordinary society, fully part of the Servite spiritual family.
               </p>
-              <Link
-                href="/history"
-                className="inline-flex items-center gap-3 font-display text-sm tracking-[0.25em] text-gold/60 transition-colors hover:text-gold"
-              >
-                Explore the Full History
-                <span className="text-base leading-none">→</span>
-              </Link>
             </div>
           </div>
 
         </div>
+      </div>
+
+      {/* CTA */}
+      <div className="mx-auto max-w-[1400px] flex justify-end px-8 pb-16 sm:px-12 lg:px-16">
+        <Link
+          href="/history"
+          className="inline-flex items-center gap-3 font-display text-sm tracking-[0.25em] text-gold/60 transition-colors hover:text-gold"
+        >
+          Explore the Full History
+          <span className="text-base leading-none">→</span>
+        </Link>
       </div>
     </section>
   );

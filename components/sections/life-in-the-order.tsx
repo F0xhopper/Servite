@@ -25,9 +25,6 @@ export function LifeInTheOrderSection() {
 
       {/* Header */}
       <div className="mb-16 lg:mb-20">
-        <p className="mb-4 font-display text-xs tracking-[0.5em] text-gold/40">
-          ✠ Membership
-        </p>
         <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Life in the Order
         </h2>
@@ -48,7 +45,7 @@ export function LifeInTheOrderSection() {
             <h3 className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold/65">
               {p.label}
             </h3>
-            <p className="text-[14px] leading-[1.9] text-white/60">
+            <p className="text-[15px] leading-[1.9] text-white/80">
               {p.body}
             </p>
           </div>
@@ -59,7 +56,7 @@ export function LifeInTheOrderSection() {
       <div className="mt-16 flex justify-end">
         <Link
           href="/about"
-          className="text-[11px] tracking-[0.25em] text-gold/40 uppercase transition-colors hover:text-gold/70"
+          className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
         >
           About the Order →
         </Link>

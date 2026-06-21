@@ -25,7 +25,7 @@ export function WhoWeAreTodaySection() {
         <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Who We Are Today
         </h2>
-        <div className="mt-6 h-px w-10 bg-gold/20" />
+        <div className="mt-5 h-px w-10 bg-gold/20" />
       </div>
 
       {/* Split: text + image */}
@@ -38,21 +38,11 @@ export function WhoWeAreTodaySection() {
               <h3 className="mb-3 text-[12px] font-semibold uppercase tracking-[0.25em] text-gold/70">
                 {p.label}
               </h3>
-              <p className="text-[15px] leading-[1.9] text-white/70">
+              <p className="text-[15px] leading-[1.9] text-white/80">
                 {p.body}
               </p>
             </div>
           ))}
-
-          {/* Single section link */}
-          <div className="flex justify-end">
-            <Link
-              href="/about"
-              className="text-[11px] tracking-[0.25em] text-gold/40 uppercase transition-colors hover:text-gold/70"
-            >
-              About the Order →
-            </Link>
-          </div>
         </div>
 
         {/* Right — image */}
@@ -67,6 +57,16 @@ export function WhoWeAreTodaySection() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
 
+      </div>
+
+      {/* CTA */}
+      <div className="mt-14 flex justify-end lg:mt-16">
+        <Link
+          href="/about"
+          className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
+        >
+          About the Order →
+        </Link>
       </div>
     </section>
   );

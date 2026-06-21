@@ -52,14 +52,11 @@ export function SevenSorrowsSection() {
 
         {/* Header */}
         <div className="mb-16 text-center lg:mb-20">
-          <p className="mb-4 font-display text-xs tracking-[0.5em] text-gold/40">
-            ✠ Servite Devotion
-          </p>
           <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
             The Seven Sorrows
           </h2>
           <div className="mx-auto mt-5 h-px w-10 bg-gold/20" />
-          <p className="mx-auto mt-8 max-w-md text-[15px] leading-[1.9] text-white/60">
+          <p className="mx-auto mt-8 max-w-md text-[15px] leading-[1.9] text-white/75">
             The Servite charism is inseparable from Mary's seven sorrows — moments in her life that trace the full arc of compassionate suffering alongside her Son. Meditation on these mysteries is the heartbeat of Servite prayer.
           </p>
         </div>
@@ -70,21 +67,21 @@ export function SevenSorrowsSection() {
           {/* Left — sorrows I, II, III (text right-aligned, numeral on the inner edge) */}
           <ol className="flex flex-col justify-center divide-y divide-white/[0.06]">
             {sorrows.slice(0, 3).map((sorrow) => (
-              <li key={sorrow.numeral} className="flex items-start justify-end gap-5 py-5">
-                <div className="text-right">
+              <li key={sorrow.numeral} className="flex items-start gap-5 py-5">
+                <span className="w-6 shrink-0 pt-0.5 font-display text-xs tracking-widest text-gold/55">
+                  {sorrow.numeral}
+                </span>
+                <div>
                   <h3 className="mb-1.5 font-display text-[15px] font-normal tracking-wide text-white/90">
                     {sorrow.title}
                   </h3>
-                  <p className="mb-2 text-[13px] leading-[1.8] text-white/50">
+                  <p className="mb-2 text-[14px] leading-[1.8] text-white/75">
                     {sorrow.body}
                   </p>
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-gold/35">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-gold/55">
                     {sorrow.ref}
                   </p>
                 </div>
-                <span className="w-6 shrink-0 pt-0.5 font-display text-xs tracking-widest text-gold/40">
-                  {sorrow.numeral}
-                </span>
               </li>
             ))}
           </ol>
@@ -94,8 +91,8 @@ export function SevenSorrowsSection() {
             <div className="relative w-full overflow-hidden">
               <div className="relative aspect-[3/4]">
                 <Image
-                  src="/images/vergine-addolarata.jpg"
-                  alt="Vergine Addolorata — Our Lady of Sorrows with seven swords"
+                  src="/images/seven-sorrows.jpg"
+                  alt="The Seven Sorrows of Mary"
                   fill
                   sizes="(max-width: 1024px) 100vw, 280px"
                   className="object-cover brightness-[0.7] saturate-[0.45]"
@@ -112,17 +109,17 @@ export function SevenSorrowsSection() {
           <ol className="flex flex-col justify-center divide-y divide-white/[0.06]">
             {sorrows.slice(3).map((sorrow) => (
               <li key={sorrow.numeral} className="flex items-start gap-5 py-5">
-                <span className="w-6 shrink-0 pt-0.5 font-display text-xs tracking-widest text-gold/40">
+                <span className="w-6 shrink-0 pt-0.5 font-display text-xs tracking-widest text-gold/55">
                   {sorrow.numeral}
                 </span>
                 <div>
                   <h3 className="mb-1.5 font-display text-[15px] font-normal tracking-wide text-white/90">
                     {sorrow.title}
                   </h3>
-                  <p className="mb-2 text-[13px] leading-[1.8] text-white/50">
+                  <p className="mb-2 text-[14px] leading-[1.8] text-white/75">
                     {sorrow.body}
                   </p>
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-gold/35">
+                  <p className="text-[11px] uppercase tracking-[0.2em] text-gold/55">
                     {sorrow.ref}
                   </p>
                 </div>

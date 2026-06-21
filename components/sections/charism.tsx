@@ -32,17 +32,11 @@ export function CharismSection() {
   return (
     <section className="bg-black">
       {/* Section header */}
-      <div className="px-6 py-20 text-center sm:px-10 sm:py-24 lg:px-16 lg:py-28">
-        <h2 className="mb-5 font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
+      <div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
+        <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Our Charism
         </h2>
-        <div className="mx-auto h-px w-10 bg-gold/20" />
-        <Link
-          href="/about"
-          className="mt-8 inline-block text-[11px] tracking-[0.25em] text-gold/40 uppercase transition-colors hover:text-gold/70"
-        >
-          About the Order →
-        </Link>
+        <div className="mt-5 h-px w-10 bg-gold/20" />
       </div>
 
       {/* Pillar rows */}
@@ -97,18 +91,28 @@ export function CharismSection() {
                 <div className="mb-5 h-px w-8 bg-gold/30" />
 
                 {/* Tagline */}
-                <p className="mb-5 text-base italic leading-relaxed text-gold/55">
+                <p className="mb-5 text-base italic leading-relaxed text-gold/70">
                   {pillar.tagline}
                 </p>
 
                 {/* Body */}
-                <p className="text-[15px] leading-[1.9] text-white/65">
+                <p className="text-[15px] leading-[1.9] text-white/80">
                   {pillar.body}
                 </p>
               </div>
             </div>
           </div>
         ))}
+      </div>
+
+      {/* CTA */}
+      <div className="flex justify-end px-6 py-10 sm:px-10 lg:px-16">
+        <Link
+          href="/about"
+          className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
+        >
+          About the Order →
+        </Link>
       </div>
     </section>
   );

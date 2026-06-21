@@ -51,12 +51,11 @@ export function EventsPreviewSection() {
 
       {/* Header */}
       <div className="mb-14 lg:mb-20">
-        <p className="mb-4 font-display text-xs tracking-[0.5em] text-gold/40">✠ Upcoming</p>
         <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
           Events
         </h2>
         <div className="mt-5 h-px w-10 bg-gold/20" />
-        <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/60">
+        <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/75">
           Gather with us in prayer, retreat, and celebration — in person and online,
           throughout the year.
         </p>
@@ -82,14 +81,14 @@ export function EventsPreviewSection() {
               {/* Date badge over image */}
               <div className="absolute bottom-0 left-0 p-5">
                 <div className="flex items-end gap-2">
-                  <span className="font-display text-4xl font-normal leading-none text-white/70">
+                  <span className="font-display text-4xl font-normal leading-none text-white/85">
                     {event.day}
                   </span>
                   <div className="mb-0.5">
                     <p className="font-display text-[10px] tracking-[0.25em] text-gold/70 uppercase">
                       {event.month}
                     </p>
-                    <p className="font-display text-[10px] tracking-[0.25em] text-white/40">
+                    <p className="font-display text-[10px] tracking-[0.25em] text-white/55">
                       {event.year}
                     </p>
                   </div>
@@ -105,17 +104,17 @@ export function EventsPreviewSection() {
               </h3>
 
               {/* Location */}
-              <p className="mb-5 text-[11px] tracking-[0.2em] text-gold/40 uppercase">
+              <p className="mb-5 text-[11px] tracking-[0.2em] text-gold/60 uppercase">
                 {event.location}
               </p>
 
               {/* Body */}
-              <p className="text-[13px] leading-[1.85] text-white/55">
+              <p className="text-[14px] leading-[1.85] text-white/75">
                 {event.body}
               </p>
 
               {/* Link affordance */}
-              <p className="mt-auto pt-6 text-[11px] tracking-[0.25em] text-gold/30 uppercase transition-colors group-hover:text-gold/60">
+              <p className="mt-auto pt-6 text-[11px] tracking-[0.25em] text-gold/50 uppercase transition-colors group-hover:text-gold">
                 Learn more →
               </p>
             </div>
@@ -127,7 +126,7 @@ export function EventsPreviewSection() {
       <div className="mt-12 flex justify-end">
         <Link
           href="/events"
-          className="text-[11px] tracking-[0.25em] text-gold/40 uppercase transition-colors hover:text-gold/70"
+          className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
         >
           All Events →
         </Link>
