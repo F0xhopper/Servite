@@ -60,10 +60,10 @@ export function PatronSaintsSection() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-0">
 
-          {/* Founders — tall portrait, anchored top */}
+          {/* Founders — anchored top */}
           <div className="lg:w-[38%] lg:pr-16">
-            <div className="relative mb-7 h-48 w-48 overflow-hidden rounded-full">
-              <Image src={founders.image} alt={founders.name} fill sizes="192px" className={`${portraitClass} ${founders.objectPosition}`} />
+            <div className="relative mb-7 h-44 w-44 overflow-hidden rounded-full">
+              <Image src={founders.image} alt={founders.name} fill sizes="176px" className={`${portraitClass} ${founders.objectPosition}`} />
             </div>
             <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{founders.name}</h3>
             <p className={titleClass}>{founders.title}</p>
@@ -81,9 +81,9 @@ export function PatronSaintsSection() {
           </div>
 
           {/* Peregrine — slight offset, bordered on left */}
-          <div className="lg:mt-10 lg:w-[32%] lg:border-l lg:border-gold/[0.07] lg:pl-12">
-            <div className="relative mb-7 h-36 w-36 overflow-hidden rounded-full">
-              <Image src={peregrine.image} alt={peregrine.name} fill sizes="112px" className={`${portraitClass} ${peregrine.objectPosition}`} />
+          <div className="lg:mt-10 lg:w-[32%] lg:pl-12">
+            <div className="relative mb-7 h-44 w-44 overflow-hidden rounded-full">
+              <Image src={peregrine.image} alt={peregrine.name} fill sizes="176px" className={`${portraitClass} ${peregrine.objectPosition}`} />
             </div>
             <h3 className="mb-1 font-display text-base font-normal leading-tight tracking-wide text-white">{peregrine.name}</h3>
             <p className={titleClass}>{peregrine.title}</p>

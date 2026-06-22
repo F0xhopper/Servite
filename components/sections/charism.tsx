@@ -6,16 +6,18 @@ const pillars = [
     title: "Marian Inspiration",
     tagline: "Mary, model of the servant",
     body: "The constant wellspring of Secular Servite life is Mary — venerated as Virgin at the Annunciation, Mother at the Nativity, intercessor at Cana, sharer of our suffering at the Cross, and Bride of the Spirit at Pentecost. Above all she is honoured as the Virgin of Sorrows: her compassionate presence in Christ's Passion makes her the perfect model of discipleship, simplicity, and total surrender to God. She is not a distant icon but a living presence — the measure against which every Servant of Mary asks how deeply they have given themselves to God.",
-    image: "/images/vergine-addolarata.jpg",
-    alt: "Vergine Addolorata — Our Lady of Sorrows",
+    image: "/images/immaculate_conception.jpg",
+    alt: "The Immaculate Conception",
+    objectPosition: "object-top",
     reverse: false,
   },
   {
     title: "Fraternal Life",
     tagline: "One mind, one heart",
     body: "Imitating the first community of the apostles, Secular Servites are called to live with one mind and one heart. The Seven Holy Founders were bound together in the Lord's name — and that bond is the Order's defining mark. This call to unity is not merely social but mystical: a participation in the communion of love that is the Church itself. In a world broken by hatred and division, Servants of Mary are sent to be visible signs that another way of belonging is possible.",
-    image: "/images/founders_vision.jpg",
-    alt: "Vision of the Seven Holy Founders",
+    image: "/images/pentacost.jpg",
+    alt: "Pentecost",
+    objectPosition: "object-center",
     reverse: true,
   },
   {
@@ -24,6 +26,7 @@ const pillars = [
     body: "Mary's vigil at the Cross was not passive — it was an act of total, costly love. Secular Servites inherit that posture: they are a people called to remain. Where others move on, they stay. Where suffering is hidden, they look. The Order asks not for grand gestures but for a consistent, incarnate compassion — rooted in the conviction that every wounded person is a place where Christ is still being crucified, and where Mary still stands.",
     image: "/images/Rogier_van_der_Weyden_Crucifixion.jpg",
     alt: "The Crucifixion — Rogier van der Weyden",
+    objectPosition: "object-center",
     reverse: false,
   },
 ];
@@ -37,6 +40,9 @@ export function CharismSection() {
           Our Charism
         </h2>
         <div className="mt-5 h-px w-10 bg-gold/20" />
+        <p className="mt-6 text-lg italic tracking-wider text-gold/70">
+          Standing with Mary at the Foot of the Cross
+        </p>
       </div>
 
       {/* Pillar rows */}
@@ -59,7 +65,7 @@ export function CharismSection() {
                 alt={pillar.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover brightness-[0.75] saturate-[0.55]"
+                className={`object-cover brightness-[0.75] saturate-[0.55] ${pillar.objectPosition}`}
               />
               {/* Gradient fade toward text side */}
               <div

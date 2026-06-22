@@ -22,10 +22,10 @@ export function ScriptureSection() {
           <div className="relative aspect-[3/4] w-full overflow-hidden">
             <Image
               src="/images/vintage_catholic.jpg"
-              alt="Vintage Catholic devotional image"
+              alt="Mater Dolorosa"
               fill
               sizes="(max-width: 1024px) 300px, 280px"
-              className="object-cover object-top brightness-[0.75] saturate-[0.55]"
+              className="object-cover object-[50%_30%] brightness-[0.75] saturate-[0.55]"
             />
           </div>
         </div>

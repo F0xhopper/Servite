@@ -13,9 +13,6 @@ export function HeroSection() {
             of Mary
           </h1>
           <div className="mb-8 h-px w-12 bg-white/20" />
-          <p className="mb-6 text-lg italic tracking-wider text-gold/70">
-            Standing with Mary at the Foot of the Cross
-          </p>
           <p className="mb-10 text-[15px] leading-[1.9] text-white/60">
             Heirs to an eight-century vigil begun by the Seven Holy Founders, the Secular Order of the Servants of Mary invites lay Catholics to live the ancient Servite charism of prayer, fraternity, and compassionate service in the heart of daily life.
           </p>
@@ -39,8 +36,8 @@ export function HeroSection() {
       {/* Image panel */}
       <div className="relative h-[420px] w-full sm:h-[500px] md:h-[560px] lg:h-full lg:flex-1">
         <Image
-          src="/images/mater-dolorosa.jpg"
-          alt="Mater Dolorosa, Our Lady of Sorrows"
+          src="/images/hero_image.jpg"
+          alt="Our Lady of Sorrows"
           fill
           className="object-cover object-center brightness-[0.75] saturate-[0.55]"
           priority
