@@ -14,8 +14,8 @@ export default function Home() {
       <HeroSection />
       <OurRootsSection />
       <ScriptureSection />
-      <SevenSorrowsSection />
       <CharismSection />
+      <SevenSorrowsSection />
       <LifeInTheOrderSection />
       <PatronSaintsSection />
       <EventsPreviewSection />
