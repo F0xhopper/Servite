@@ -36,7 +36,7 @@ export function HeroSection() {
       {/* Image panel */}
       <div className="relative h-[420px] w-full sm:h-[500px] md:h-[560px] lg:h-full lg:flex-1">
         <Image
-          src="/images/hero_image.jpg"
+          src="/images/founders_vision.jpg"
           alt="Our Lady of Sorrows"
           fill
           className="object-cover object-center brightness-[0.75] saturate-[0.55]"

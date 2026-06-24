@@ -14,21 +14,21 @@ const saints: Saint[] = [
     name: "The Seven Holy Founders",
     title: "Founders of the Servite Order",
     body: "Seven wealthy Florentine laymen who withdrew from the world together to serve Our Lady, founding the Order in 1233. Canonised as one — the only collective canonisation in the Church.",
-    image: "/images/founders_vision.jpg",
-    objectPosition: "object-center",
+    image: "/images/servite-founders.jpeg",
+    objectPosition: "object-top",
   },
   {
     name: "St. Philip Benizi",
     title: "Reformer & Fifth Prior General",
     body: "Called the 'second founder,' Philip stabilised and expanded the Order through a critical period of growth, and was so venerated that he fled to avoid election as pope.",
-    image: "/images/mater-dolorosa.jpg",
+    image: "/images/benizi.jpg",
     objectPosition: "object-top",
   },
   {
     name: "St. Peregrine Laziosi",
     title: "Patron of the Sick & Suffering",
     body: "Miraculously healed of cancer on the eve of amputation, Peregrine is the Order's great intercessor for the ill — bearing in his own body the compassion Mary showed at the Cross.",
-    image: "/images/vintage_catholic.jpg",
+    image: "/images/peregrine.jpg",
     objectPosition: "object-top",
   },
 ];
@@ -62,8 +62,8 @@ export function PatronSaintsSection() {
 
           {/* Founders — anchored top */}
           <div className="lg:w-[38%] lg:pr-16">
-            <div className="relative mb-7 h-44 w-44 overflow-hidden rounded-full">
-              <Image src={founders.image} alt={founders.name} fill sizes="176px" className={`${portraitClass} ${founders.objectPosition}`} />
+            <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
+              <Image src={founders.image} alt={founders.name} fill sizes="240px" className={`${portraitClass} ${founders.objectPosition}`} />
             </div>
             <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{founders.name}</h3>
             <p className={titleClass}>{founders.title}</p>
@@ -72,20 +72,20 @@ export function PatronSaintsSection() {
 
           {/* Philip — pushed down */}
           <div className="lg:mt-24 lg:w-[30%] lg:px-8">
-            <div className="relative mb-7 h-44 w-44 overflow-hidden rounded-full">
-              <Image src={philip.image} alt={philip.name} fill sizes="176px" className={`${portraitClass} ${philip.objectPosition}`} />
+            <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
+              <Image src={philip.image} alt={philip.name} fill sizes="240px" className={`${portraitClass} ${philip.objectPosition}`} />
             </div>
-            <h3 className="mb-1 font-display text-lg font-normal leading-tight tracking-wide text-white">{philip.name}</h3>
+            <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{philip.name}</h3>
             <p className={titleClass}>{philip.title}</p>
             <p className={bodyClass}>{philip.body}</p>
           </div>
 
           {/* Peregrine — slight offset, bordered on left */}
           <div className="lg:mt-10 lg:w-[32%] lg:pl-12">
-            <div className="relative mb-7 h-44 w-44 overflow-hidden rounded-full">
-              <Image src={peregrine.image} alt={peregrine.name} fill sizes="176px" className={`${portraitClass} ${peregrine.objectPosition}`} />
+            <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
+              <Image src={peregrine.image} alt={peregrine.name} fill sizes="240px" className={`${portraitClass} ${peregrine.objectPosition}`} />
             </div>
-            <h3 className="mb-1 font-display text-base font-normal leading-tight tracking-wide text-white">{peregrine.name}</h3>
+            <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{peregrine.name}</h3>
             <p className={titleClass}>{peregrine.title}</p>
             <p className={bodyClass}>{peregrine.body}</p>
           </div>

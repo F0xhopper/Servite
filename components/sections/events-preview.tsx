@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 interface Event {
@@ -9,7 +8,6 @@ interface Event {
   location: string;
   body: string;
   href: string;
-  image: string;
 }
 
 const events: Event[] = [
@@ -21,7 +19,6 @@ const events: Event[] = [
     location: "Chapel of St. Philip Benizi · Chicago",
     body: "The Order's principal feast day — Mass, solemn procession, and evening prayer in honour of the Virgin of Sorrows. All are welcome.",
     href: "/events/feast-of-our-lady-of-sorrows",
-    image: "/images/vergine-addolarata.jpg",
   },
   {
     day: "07",
@@ -31,7 +28,6 @@ const events: Event[] = [
     location: "Online · Zoom",
     body: "A guided recitation of the Servite Rosary of the Seven Sorrows, with reflections drawn from the writings of St. Philip Benizi.",
     href: "/events/servite-rosary-evening",
-    image: "/images/our_lady_of_sorrows.jpg",
   },
   {
     day: "29",
@@ -41,7 +37,6 @@ const events: Event[] = [
     location: "Mater Dolorosa Retreat Centre · Los Angeles",
     body: "A day of silence, prayer, and formation — open to fraternity members and those discerning a call to Secular Servite life.",
     href: "/events/advent-retreat-day",
-    image: "/images/mary_foot_of_cross.jpg",
   },
 ];
 
@@ -61,69 +56,52 @@ export function EventsPreviewSection() {
         </p>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 gap-px border border-white/[0.06] sm:grid-cols-3">
+      {/* Event list */}
+      <div className="divide-y divide-white/[0.07]">
         {events.map((event) => (
           <Link
             key={event.href}
             href={event.href}
-            className="group flex flex-col bg-black transition-colors hover:bg-white/[0.02]"
+            className="group flex flex-col gap-6 py-10 transition-colors sm:flex-row sm:items-start sm:gap-10 lg:gap-16"
           >
-            {/* Image */}
-            <div className="relative h-52 overflow-hidden">
-              <Image
-                src={event.image}
-                alt={event.title}
-                fill
-                sizes="(max-width: 640px) 100vw, 33vw"
-                className="object-cover brightness-[0.55] saturate-[0.4] transition-[filter] duration-500 group-hover:brightness-[0.65]"
-              />
-              {/* Date badge over image */}
-              <div className="absolute bottom-0 left-0 p-5">
-                <div className="flex items-end gap-2">
-                  <span className="font-display text-4xl font-normal leading-none text-white/85">
-                    {event.day}
-                  </span>
-                  <div className="mb-0.5">
-                    <p className="font-display text-[10px] tracking-[0.25em] text-gold/70 uppercase">
-                      {event.month}
-                    </p>
-                    <p className="font-display text-[10px] tracking-[0.25em] text-white/55">
-                      {event.year}
-                    </p>
-                  </div>
-                </div>
-              </div>
+            {/* Date */}
+            <div className="flex-none sm:w-28 lg:w-36">
+              <p className="font-display text-5xl font-light leading-none text-white/80 lg:text-6xl">
+                {event.day}
+              </p>
+              <p className="mt-2 text-[11px] uppercase tracking-[0.25em] text-gold/60">
+                {event.month}
+              </p>
+              <p className="text-[11px] uppercase tracking-[0.25em] text-white/30">
+                {event.year}
+              </p>
             </div>
 
-            {/* Text */}
-            <div className="flex flex-1 flex-col px-8 py-8">
-              {/* Title */}
-              <h3 className="mb-3 font-display text-xl font-normal leading-snug tracking-wide text-white">
+            {/* Content */}
+            <div className="flex-1">
+              <h3 className="mb-2 font-display text-xl font-normal leading-snug tracking-wide text-white sm:text-2xl">
                 {event.title}
               </h3>
-
-              {/* Location */}
-              <p className="mb-5 text-[11px] tracking-[0.2em] text-gold/60 uppercase">
+              <p className="mb-4 text-[11px] uppercase tracking-[0.2em] text-gold/55">
                 {event.location}
               </p>
-
-              {/* Body */}
-              <p className="text-[14px] leading-[1.85] text-white/75">
+              <p className="text-[14px] leading-[1.85] text-white/70">
                 {event.body}
               </p>
+            </div>
 
-              {/* Link affordance */}
-              <p className="mt-auto pt-6 text-[11px] tracking-[0.25em] text-gold/50 uppercase transition-colors group-hover:text-gold">
+            {/* Arrow — hidden on mobile since the whole row is a link */}
+            <div className="hidden flex-none self-center sm:block">
+              <span className="text-[11px] uppercase tracking-[0.25em] text-gold/40 transition-colors group-hover:text-gold">
                 Learn more →
-              </p>
+              </span>
             </div>
           </Link>
         ))}
       </div>
 
-      {/* Single section link */}
-      <div className="mt-12 flex justify-end">
+      {/* Section link */}
+      <div className="mt-6 flex justify-end">
         <Link
           href="/events"
           className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
