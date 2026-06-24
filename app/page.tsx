@@ -4,7 +4,7 @@ import { OurRootsSection } from "@/components/sections/our-roots";
 import { CharismSection } from "@/components/sections/charism";
 import { LifeInTheOrderSection } from "@/components/sections/life-in-the-order";
 import { PatronSaintsSection } from "@/components/sections/patron-saints";
-import { PrayWithUsSection } from "@/components/sections/pray-with-us";
+import { MarianQuoteSection } from "@/components/sections/marian-quote";
 import { EventsPreviewSection } from "@/components/sections/events-preview";
 import { ReflectionsPreviewSection } from "@/components/sections/reflections-preview";
 // import { HowItBeginsSection } from "@/components/sections/how-it-begins";
@@ -25,7 +25,7 @@ export default function Home() {
       <PatronSaintsSection />
 
       {/* — Join — */}
-      <PrayWithUsSection />
+      <MarianQuoteSection />
       <EventsPreviewSection />
       <ReflectionsPreviewSection />
       {/* <HowItBeginsSection /> */}
