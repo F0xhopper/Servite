@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 import { contactDetails } from "@/lib/contact-details";
 
 const description =
-  "Write to the Secular Order of the Servants of Mary with questions, to arrange a visit, or for a first conversation about the Order.";
+  "Write to the Secular Order of the Servants of Mary with questions, or for a first conversation about the Order.";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -35,9 +35,9 @@ export default function ContactPage() {
           <div className="mt-5 h-px w-10 bg-gold/20" />
           <p className="mt-8 max-w-lg text-[15px] leading-[1.9] text-white/75">
             We would be glad to hear from you. Whether you are simply curious
-            about the Servants of Mary, would like to visit a fraternity, or
-            sense a call to the Secular Order, write to us and someone will
-            answer personally. There is nothing to commit to in asking.
+            about the Servants of Mary or sense a call to the Secular Order,
+            write to us and someone will answer personally. There is nothing to
+            commit to in asking.
           </p>
         </div>
 
@@ -56,14 +56,6 @@ export default function ContactPage() {
               >
                 {contactDetails.email}
               </a>
-            </div>
-
-            <div>
-              <p className={detailLabelClass}>Visiting</p>
-              <p className="text-[15px] leading-[1.9] text-white/70">
-                Enquirers are always welcome. Write to us and we will tell you
-                where and when to find us, and look out for you when you come.
-              </p>
             </div>
 
             <p className="text-[13px] italic leading-relaxed text-gold/40">
