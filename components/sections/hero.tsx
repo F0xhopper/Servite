@@ -18,14 +18,14 @@ export function HeroSection() {
           </p>
           <div className="flex flex-wrap items-center gap-5">
             <Link
-              href="/inquire"
+              href="/contact"
               className="border border-gold/40 px-6 py-2.5 text-sm tracking-wider text-gold/70 transition-colors hover:border-gold hover:text-gold"
             >
-              Begin the Journey
+              Contact Us
             </Link>
             <Link
-              href="/our-story"
-              className="text-sm tracking-wider text-white/40 transition-colors hover:text-white/70"
+              href="/#our-story"
+              className="inline-block py-2.5 text-sm tracking-wider text-white/40 transition-colors hover:text-white/70"
             >
               Our Story →
             </Link>
@@ -39,7 +39,7 @@ export function HeroSection() {
           src="/images/founders_vision.jpg"
           alt="Our Lady of Sorrows"
           fill
-          className="object-cover object-center brightness-[0.75] saturate-[0.55]"
+          className="object-cover object-[50%_20%] brightness-[0.75] saturate-[0.55]"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-l from-transparent to-black/40" />

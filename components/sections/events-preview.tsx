@@ -7,7 +7,6 @@ interface Event {
   title: string;
   location: string;
   body: string;
-  href: string;
 }
 
 const events: Event[] = [
@@ -17,8 +16,7 @@ const events: Event[] = [
     year: "2026",
     title: "Feast of Our Lady of Sorrows",
     location: "Chapel of St. Philip Benizi · Chicago",
-    body: "The Order's principal feast day — Mass, solemn procession, and evening prayer in honour of the Virgin of Sorrows. All are welcome.",
-    href: "/events/feast-of-our-lady-of-sorrows",
+    body: "The Order's principal feast day: Mass, solemn procession, and evening prayer in honour of the Virgin of Sorrows. All are welcome.",
   },
   {
     day: "07",
@@ -27,7 +25,6 @@ const events: Event[] = [
     title: "Servite Rosary Evening",
     location: "Online · Zoom",
     body: "A guided recitation of the Servite Rosary of the Seven Sorrows, with reflections drawn from the writings of St. Philip Benizi.",
-    href: "/events/servite-rosary-evening",
   },
   {
     day: "29",
@@ -35,14 +32,16 @@ const events: Event[] = [
     year: "2026",
     title: "Advent Retreat Day",
     location: "Mater Dolorosa Retreat Centre · Los Angeles",
-    body: "A day of silence, prayer, and formation — open to fraternity members and those discerning a call to Secular Servite life.",
-    href: "/events/advent-retreat-day",
+    body: "A day of silence, prayer, and formation, open to fraternity members and those discerning a call to Secular Servite life.",
   },
 ];
 
 export function EventsPreviewSection() {
   return (
-    <section className="bg-black px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-32">
+    <section
+      id="events"
+      className="scroll-mt-24 bg-black px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-32"
+    >
 
       {/* Header */}
       <div className="mb-14 lg:mb-20">
@@ -51,7 +50,7 @@ export function EventsPreviewSection() {
         </h2>
         <div className="mt-5 h-px w-10 bg-gold/20" />
         <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/75">
-          Gather with us in prayer, retreat, and celebration — in person and online,
+          Gather with us in prayer, retreat, and celebration, in person and online,
           throughout the year.
         </p>
       </div>
@@ -59,10 +58,9 @@ export function EventsPreviewSection() {
       {/* Event list */}
       <div className="divide-y divide-white/[0.07]">
         {events.map((event) => (
-          <Link
-            key={event.href}
-            href={event.href}
-            className="group flex flex-col gap-6 py-10 transition-colors sm:flex-row sm:items-start sm:gap-10 lg:gap-16"
+          <div
+            key={event.title}
+            className="flex flex-col gap-6 py-10 sm:flex-row sm:items-start sm:gap-10 lg:gap-16"
           >
             {/* Date */}
             <div className="flex-none sm:w-28 lg:w-36">
@@ -89,24 +87,17 @@ export function EventsPreviewSection() {
                 {event.body}
               </p>
             </div>
-
-            {/* Arrow — hidden on mobile since the whole row is a link */}
-            <div className="hidden flex-none self-center sm:block">
-              <span className="text-[11px] uppercase tracking-[0.25em] text-gold/40 transition-colors group-hover:text-gold">
-                Learn more →
-              </span>
-            </div>
-          </Link>
+          </div>
         ))}
       </div>
 
       {/* Section link */}
       <div className="mt-6 flex justify-end">
         <Link
-          href="/events"
-          className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
+          href="/contact"
+          className="inline-block py-3 -my-3 text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
         >
-          All Events →
+          Contact Us →
         </Link>
       </div>
 

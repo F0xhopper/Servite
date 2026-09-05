@@ -18,7 +18,7 @@ export function PrayWithUsSection() {
       {/* Body */}
       <div className="max-w-xl space-y-6">
         <p className="text-[15px] leading-[1.9] text-white/80">
-          Fifteen Hail Marys with meditations on Mary's compassion — the heartbeat
+          Fifteen Hail Marys with meditations on Mary's compassion, the heartbeat
           of Servite daily prayer. It takes around twenty minutes and can be prayed
           alone or with your fraternity.
         </p>

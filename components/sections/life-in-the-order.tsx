@@ -1,27 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
 
+// Two short sentences each: enough to picture the life, little enough that the
+// rest is worth a conversation.
 const practices = [
   {
     label: "Daily Prayer",
-    body: "Each day begins with a Morning Offering and, where possible, Morning Prayer from the Liturgy of the Hours. At some point in the day, members pray the Rosary of the Seven Sorrows — fifteen Hail Marys with meditations on Mary's compassion. An evening examen closes the day: a brief, honest review of where God was present and where he was missed.",
+    body: "A morning offering, and where possible Morning Prayer from the Liturgy of the Hours. At some point in the day, the Rosary of the Seven Sorrows; at its close, a brief evening examen.",
+    image: "/images/prayer-rosary-hands.jpg",
+    alt: "Praying hands holding a rosary",
+    objectPosition: "object-center",
   },
   {
     label: "Monthly Fraternity",
-    body: "Once a month, members gather with their local fraternity — typically for two hours. A meeting follows a simple pattern: opening prayer, a formation session on the Rule or Servite spirituality, open sharing, and a closing Hail Mary. Fraternities are small by design, rarely more than fifteen people, so that genuine community is possible.",
+    body: "Once a month the local fraternity gathers for about two hours: opening prayer, a session of formation, open sharing, and a closing Hail Mary. Fraternities stay small by design.",
+    image: "/images/fraternity-misericordia.jpg",
+    alt: "Members of a confraternity at prayer beneath the Virgin's mantle",
+    objectPosition: "object-center",
   },
   {
     label: "The Rule of Life",
-    body: "The OSSM Rule of Life, confirmed by the Holy See in 1995, sets out what every member commits to: daily prayer, monthly fraternity, ongoing formation, and a personal work of service. New members make an initial promise after a period of formation. That promise is renewed each year — not as a formality but as a conscious re-choosing of the life.",
+    body: "The OSSM Rule of Life, confirmed by the Holy See in 1995, sets out what every member commits to. A promise is made after a period of formation, then freely renewed each year.",
+    image: "/images/rule-of-life-book.jpg",
+    alt: "Hands holding an open illuminated book",
+    objectPosition: "object-center",
   },
   {
     label: "A Work of Service",
-    body: "Each member discerns one concrete act of mercy rooted in their own community — visiting the sick, accompanying refugees, supporting a food pantry, sitting with the dying. The specific work matters less than the consistency: showing up, staying present, and bringing Mary's compassion into a particular wound rather than a general good intention.",
+    body: "Each member takes up one concrete act of mercy in their own community: the sick, the grieving, the stranger. What matters is less the work chosen than the staying with it.",
+    image: "/images/washing-of-the-feet.jpg",
+    alt: "Christ washing the disciples' feet",
+    objectPosition: "object-center",
   },
 ];
 
 export function LifeInTheOrderSection() {
   return (
-    <section className="bg-black px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36">
+    <section
+      id="life-in-the-order"
+      className="scroll-mt-24 bg-black px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36"
+    >
 
       {/* Header */}
       <div className="mb-16 lg:mb-20">
@@ -32,33 +50,38 @@ export function LifeInTheOrderSection() {
       </div>
 
       {/* Practices */}
-      <div className="grid grid-cols-1 gap-0 divide-y divide-white/[0.07] sm:grid-cols-2 sm:divide-y-0 sm:gap-x-12 sm:gap-y-0">
-        {practices.map((p, i) => (
-          <div
-            key={p.label}
-            className={[
-              "py-8 sm:py-0",
-              i < 2 ? "sm:pb-12 sm:border-b sm:border-white/[0.07]" : "sm:pt-12",
-              i % 2 === 1 ? "sm:pl-10 sm:border-l sm:border-white/[0.07]" : "",
-            ].join(" ")}
-          >
+      <div className="grid grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-14 lg:grid-cols-4 lg:gap-8">
+        {practices.map((p) => (
+          <div key={p.label} className="flex flex-col">
+            <div className="relative mb-7 aspect-[3/4] overflow-hidden">
+              <Image
+                src={p.image}
+                alt={p.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className={`object-cover brightness-[0.72] saturate-[0.5] ${p.objectPosition}`}
+              />
+            </div>
             <h3 className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold/65">
               {p.label}
             </h3>
-            <p className="text-[15px] leading-[1.9] text-white/80">
+            <p className="text-[14px] leading-[1.85] text-white/75">
               {p.body}
             </p>
           </div>
         ))}
       </div>
 
-      {/* Link */}
-      <div className="mt-16 flex justify-end">
+      {/* CTA */}
+      <div className="mt-16 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between lg:mt-20">
+        <p className="max-w-md text-[15px] leading-[1.9] text-white/65">
+          Want to know what this looks like day to day? Get in touch.
+        </p>
         <Link
-          href="/about"
-          className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
+          href="/contact"
+          className="self-start border border-gold/50 px-8 py-3.5 text-sm tracking-[0.3em] text-gold/80 transition-colors hover:border-gold hover:text-gold"
         >
-          About the Order →
+          Contact Us
         </Link>
       </div>
 

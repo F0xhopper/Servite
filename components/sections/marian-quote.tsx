@@ -6,7 +6,7 @@ export function MarianQuoteSection() {
 
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-16 lg:flex-row lg:items-center lg:gap-20">
 
-        {/* Image — left */}
+        {/* Image: left */}
         <div className="w-full max-w-[260px] flex-none sm:max-w-[300px] lg:max-w-[280px]">
           <div className="relative aspect-[3/4] w-full overflow-hidden">
             <Image
@@ -19,7 +19,7 @@ export function MarianQuoteSection() {
           </div>
         </div>
 
-        {/* Quote — right */}
+        {/* Quote: right */}
         <div className="flex-1 text-center lg:text-left">
           <blockquote className="font-display text-2xl font-normal leading-relaxed tracking-wide text-white sm:text-3xl lg:text-[2.5rem] lg:leading-relaxed">
             "Where sorrow is deepest, there Mary stands. There, too, the Servant of Mary is called to remain."

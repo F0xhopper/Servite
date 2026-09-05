@@ -1,11 +1,13 @@
 import Link from "next/link";
 
+import { contactDetails } from "@/lib/contact-details";
+
 const navLinks = [
-  { label: "Our Story", href: "/our-story" },
-  { label: "Spirituality", href: "/spirituality" },
-  { label: "Saints", href: "/saints" },
-  { label: "Events", href: "/events" },
-  { label: "Become a Member", href: "/inquire" },
+  { label: "Our Story", href: "/#our-story" },
+  { label: "Saints", href: "/#saints" },
+  { label: "Upcoming Events", href: "/#events" },
+  { label: "Feast Days", href: "/feast-days" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export function Footer() {
@@ -35,12 +37,12 @@ export function Footer() {
               Navigation
             </p>
             <nav aria-label="Footer navigation">
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col gap-1">
                 {navLinks.map(({ label, href }) => (
                   <li key={href}>
                     <Link
                       href={href}
-                      className="text-[13px] tracking-wider text-white/40 transition-colors hover:text-white/70"
+                      className="inline-block py-2.5 text-[14px] tracking-wider text-white/40 transition-colors hover:text-white/70"
                     >
                       {label}
                     </Link>
@@ -55,24 +57,34 @@ export function Footer() {
             <p className="mb-5 font-display text-[10px] uppercase tracking-[0.45em] text-white/25">
               Fraternity
             </p>
-            <div className="space-y-5 text-[13px] leading-relaxed text-white/40">
+            <div className="space-y-5 text-[14px] leading-relaxed text-white/40">
               <div>
                 <p className="mb-1.5 font-display text-[10px] uppercase tracking-[0.3em] text-gold/30">
                   Meeting Times
                 </p>
-                <p>Second Sunday of each month</p>
-                <p>10:00 am · Parish Hall</p>
+                <p>{contactDetails.meeting.when}</p>
+                <p>
+                  {contactDetails.meeting.time} · {contactDetails.meeting.place}
+                </p>
               </div>
               <div>
                 <p className="mb-1.5 font-display text-[10px] uppercase tracking-[0.3em] text-gold/30">
                   Contact
                 </p>
                 <a
-                  href="mailto:info@ossm.org"
-                  className="transition-colors hover:text-white/60"
+                  href={`mailto:${contactDetails.email}`}
+                  className="inline-block py-2 transition-colors hover:text-white/60"
                 >
-                  info@ossm.org
+                  {contactDetails.email}
                 </a>
+                <p className="mt-2">
+                  <Link
+                    href="/contact"
+                    className="inline-block py-2 text-gold/50 transition-colors hover:text-gold"
+                  >
+                    Contact us →
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

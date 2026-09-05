@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | OSSM",
   },
   description:
-    "Secular Order of the Servants of Mary (OSSM) — Heirs to an eight-century Servite charism of prayer, fraternity, and compassionate service.",
+    "Secular Order of the Servants of Mary (OSSM). Heirs to an eight-century Servite charism of prayer, fraternity, and compassionate service.",
 };
 
 export default function RootLayout({

@@ -6,7 +6,7 @@ export function ScriptureSection() {
 
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-16 lg:flex-row lg:items-center lg:gap-20">
 
-        {/* Verse — left */}
+        {/* Verse: left */}
         <div className="flex-1 text-center lg:text-left">
           <blockquote className="font-display text-2xl font-normal leading-relaxed tracking-wide text-white sm:text-3xl lg:text-[2.5rem] lg:leading-relaxed">
             "And thy own soul a sword shall pierce, that, out of many hearts, thoughts may be revealed."
@@ -17,7 +17,7 @@ export function ScriptureSection() {
           </p>
         </div>
 
-        {/* Image — right */}
+        {/* Image: right */}
         <div className="w-full max-w-[260px] flex-none sm:max-w-[300px] lg:max-w-[280px]">
           <div className="relative aspect-[3/4] w-full overflow-hidden">
             <Image

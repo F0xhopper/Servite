@@ -5,25 +5,25 @@ const pillars = [
   {
     title: "Marian Inspiration",
     tagline: "Mary, model of the servant",
-    body: "The constant wellspring of Secular Servite life is Mary — venerated as Virgin at the Annunciation, Mother at the Nativity, intercessor at Cana, sharer of our suffering at the Cross, and Bride of the Spirit at Pentecost. Above all she is honoured as the Virgin of Sorrows: her compassionate presence in Christ's Passion makes her the perfect model of discipleship, simplicity, and total surrender to God. She is not a distant icon but a living presence — the measure against which every Servant of Mary asks how deeply they have given themselves to God.",
+    body: "The constant wellspring of Secular Servite life is Mary, venerated as Virgin at the Annunciation, Mother at the Nativity, intercessor at Cana, sharer of our suffering at the Cross, and Bride of the Spirit at Pentecost. Above all she is honoured as the Virgin of Sorrows: her compassionate presence in Christ's Passion makes her the perfect model of discipleship, simplicity, and total surrender to God. She is not a distant icon but a living presence, the measure against which every Servant of Mary asks how deeply they have given themselves to God.",
     image: "/images/Mary-Peace.jpg",
     alt: "Mary, Queen of Peace",
-    objectPosition: "object-center",
+    objectPosition: "object-[50%_18%]",
     reverse: false,
   },
   {
     title: "Fraternal Life",
     tagline: "One mind, one heart",
-    body: "Imitating the first community of the apostles, Secular Servites are called to live with one mind and one heart. The Seven Holy Founders were bound together in the Lord's name — and that bond is the Order's defining mark. This call to unity is not merely social but mystical: a participation in the communion of love that is the Church itself. In a world broken by hatred and division, Servants of Mary are sent to be visible signs that another way of belonging is possible.",
+    body: "Imitating the first community of the apostles, Secular Servites are called to live with one mind and one heart. The Seven Holy Founders were bound together in the Lord's name, and that bond is the Order's defining mark. This call to unity is not merely social but mystical: a participation in the communion of love that is the Church itself. In a world broken by hatred and division, Servants of Mary are sent to be visible signs that another way of belonging is possible.",
     image: "/images/pentacost.jpg",
     alt: "Pentecost",
     objectPosition: "object-center",
     reverse: true,
   },
   {
-    title: "Charitable Service",
-    tagline: "Compassion made flesh",
-    body: "Mary's vigil at the Cross was not passive — it was an act of total, costly love. Secular Servites inherit that posture: they are a people called to remain. Where others move on, they stay. Where suffering is hidden, they look. The Order asks not for grand gestures but for a consistent, incarnate compassion — rooted in the conviction that every wounded person is a place where Christ is still being crucified, and where Mary still stands.",
+    title: "Compassionate Service",
+    tagline: "Compassion and comfort for those in need",
+    body: "Mary's vigil at the Cross was not passive. It was an act of total, costly love. Secular Servites inherit that posture: where others move on, they stay; where suffering is hidden, they look. Not grand gestures, but comfort brought to a particular person in a particular need.",
     image: "/images/peita-image.jpg",
     alt: "Pietà",
     objectPosition: "object-center",
@@ -33,7 +33,7 @@ const pillars = [
 
 export function CharismSection() {
   return (
-    <section className="bg-black">
+    <section id="charism" className="scroll-mt-24 bg-black">
       {/* Section header */}
       <div className="px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-28">
         <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
@@ -50,14 +50,13 @@ export function CharismSection() {
         {pillars.map((pillar) => (
           <div
             key={pillar.title}
-            className="grid min-h-[480px] grid-cols-1 lg:grid-cols-2 lg:min-h-[520px]"
+            className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[680px]"
           >
             {/* Image column */}
             <div
               className={[
-                "relative h-64 overflow-hidden sm:h-80 lg:h-auto",
+                "relative aspect-[10/9] overflow-hidden lg:aspect-auto lg:h-auto",
                 pillar.reverse ? "lg:order-last" : "lg:order-first",
-                "",
               ].join(" ")}
             >
               <Image
@@ -114,10 +113,10 @@ export function CharismSection() {
       {/* CTA */}
       <div className="flex justify-end px-6 py-10 sm:px-10 lg:px-16">
         <Link
-          href="/about"
-          className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
+          href="/contact"
+          className="inline-block py-3 -my-3 text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
         >
-          About the Order →
+          Contact Us →
         </Link>
       </div>
     </section>

@@ -16,7 +16,7 @@ const reflections: Reflection[] = [
     author: "Br. Thomas M.",
     title: "Abiding at the Foot of the Cross",
     excerpt:
-      "In the silence beneath the cross, Mary did not turn away. She stayed — and in her staying, she teaches us that fidelity to suffering is itself a form of prayer.",
+      "In the silence beneath the cross, Mary did not turn away. She stayed, and in her staying, she teaches us that fidelity to suffering is itself a form of prayer.",
     href: "/reflections/abiding-at-the-foot-of-the-cross",
     image: "/images/mary_foot_of_cross.jpg",
   },
@@ -25,7 +25,7 @@ const reflections: Reflection[] = [
     author: "Sr. Catherine O.",
     title: "The Seven Sorrows as a Path of Union",
     excerpt:
-      "Each sorrow is not merely a wound to be pitied but a door — an invitation to enter more deeply into the mystery of compassion that unites the Mother to her Son.",
+      "Each sorrow is not merely a wound to be pitied but a door, an invitation to enter more deeply into the mystery of compassion that unites the Mother to her Son.",
     href: "/reflections/seven-sorrows-path-of-union",
     image: "/images/seven-sorrows.jpg",
   },
@@ -34,7 +34,7 @@ const reflections: Reflection[] = [
     author: "Fr. Jerome A.",
     title: "On Poverty of Spirit in Servite Life",
     excerpt:
-      "The founders of our Order left everything — not as a heroic gesture, but because they had glimpsed something so luminous that everything else became shadow.",
+      "The founders of our Order left everything, not as a heroic gesture, but because they had glimpsed something so luminous that everything else became shadow.",
     href: "/reflections/poverty-of-spirit-servite-life",
     image: "/images/founders_vision.jpg",
   },
@@ -51,7 +51,7 @@ export function ReflectionsPreviewSection() {
         </h2>
         <div className="mt-5 h-px w-10 bg-gold/20" />
         <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/75">
-          Writings from within the Order — meditations on Mary, the sorrows, and
+          Writings from within the Order: meditations on Mary, the sorrows, and
           the inner life of Servite prayer.
         </p>
       </div>
@@ -109,7 +109,7 @@ export function ReflectionsPreviewSection() {
       <div className="mt-12 flex justify-end">
         <Link
           href="/reflections"
-          className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
+          className="inline-block py-3 -my-3 text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
         >
           All Reflections →
         </Link>

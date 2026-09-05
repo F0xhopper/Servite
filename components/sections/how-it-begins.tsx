@@ -4,7 +4,7 @@ const steps = [
   {
     number: "01",
     title: "Inquiry",
-    body: "Reach out to a local fraternity, or contact us online. You will be invited to attend a meeting as a guest — no commitment required, only an open heart and a question.",
+    body: "Reach out to a local fraternity, or contact us online. You will be invited to attend a meeting as a guest, with no commitment required, only an open heart and a question.",
   },
   {
     number: "02",
@@ -14,7 +14,7 @@ const steps = [
   {
     number: "03",
     title: "Profession",
-    body: "At the end of novitiate, you make an initial promise — a conscious act of self-giving renewed each year, not as a formality, but as a free re-choosing of the life.",
+    body: "At the end of novitiate, you make an initial promise, a conscious act of self-giving renewed each year, not as a formality, but as a free re-choosing of the life.",
   },
 ];
 
@@ -27,7 +27,7 @@ export function HowItBeginsSection() {
         </h2>
         <div className="mt-5 h-px w-10 bg-gold/20" />
         <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/75">
-          The path into Secular Servite life moves through three movements — not a
+          The path into Secular Servite life moves through three movements, not a
           fast track, but a gradual deepening.
         </p>
       </div>

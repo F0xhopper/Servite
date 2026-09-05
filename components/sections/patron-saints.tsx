@@ -13,21 +13,21 @@ const saints: Saint[] = [
   {
     name: "The Seven Holy Founders",
     title: "Founders of the Servite Order",
-    body: "Seven wealthy Florentine laymen who withdrew from the world together to serve Our Lady, founding the Order in 1233. Canonised as one — the only collective canonisation in the Church.",
+    body: "Seven wealthy Florentine laymen who withdrew from the world together to serve Our Lady, founding the Order in 1233. Canonised as one, the only collective canonisation in the Church.",
     image: "/images/servite-founders.jpeg",
     objectPosition: "object-top",
   },
   {
-    name: "St. Philip Benizi",
-    title: "Reformer & Fifth Prior General",
-    body: "Called the 'second founder,' Philip stabilised and expanded the Order through a critical period of growth, and was so venerated that he fled to avoid election as pope.",
-    image: "/images/benizi.jpg",
+    name: "St. Juliana Falconieri",
+    title: "Foundress of the Servite Third Order",
+    body: "Niece of one of the Seven Holy Founders, Juliana received the habit from St. Philip Benizi and gathered the women of Florence into the Third Order, the root from which the Secular Order grew. Feast 19 June.",
+    image: "/images/juliana-falconieri.jpg",
     objectPosition: "object-top",
   },
   {
     name: "St. Peregrine Laziosi",
     title: "Patron of the Sick & Suffering",
-    body: "Miraculously healed of cancer on the eve of amputation, Peregrine is the Order's great intercessor for the ill — bearing in his own body the compassion Mary showed at the Cross.",
+    body: "Miraculously healed of cancer on the eve of amputation, Peregrine is the Order's great intercessor for the ill, bearing in his own body the compassion Mary showed at the Cross.",
     image: "/images/peregrine.jpg",
     objectPosition: "object-top",
   },
@@ -38,10 +38,13 @@ const bodyClass = "text-[14px] leading-[1.8] text-white/78";
 const titleClass = "mb-4 text-[13px] italic leading-snug text-gold/65";
 
 export function PatronSaintsSection() {
-  const [founders, philip, peregrine] = saints;
+  const [founders, juliana, peregrine] = saints;
 
   return (
-    <section className="bg-black px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-32">
+    <section
+      id="saints"
+      className="scroll-mt-24 bg-black px-6 py-20 sm:px-10 sm:py-24 lg:px-16 lg:py-32"
+    >
 
       {/* Header */}
       <div className="mb-20 lg:mb-28">
@@ -50,7 +53,7 @@ export function PatronSaintsSection() {
         </h2>
         <div className="mt-5 h-px w-10 bg-gold/20" />
         <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/75">
-          The canonised sons and daughters of the Servite family — each a living
+          The canonised sons and daughters of the Servite family, each a living
           icon of the Order's charism of prayer, fraternity, and compassionate
           service.
         </p>
@@ -60,7 +63,7 @@ export function PatronSaintsSection() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-0">
 
-          {/* Founders — anchored top */}
+          {/* Founders: anchored top */}
           <div className="lg:w-[38%] lg:pr-16">
             <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
               <Image src={founders.image} alt={founders.name} fill sizes="240px" className={`${portraitClass} ${founders.objectPosition}`} />
@@ -70,17 +73,17 @@ export function PatronSaintsSection() {
             <p className={`max-w-xs ${bodyClass}`}>{founders.body}</p>
           </div>
 
-          {/* Philip — pushed down */}
+          {/* Juliana: pushed down */}
           <div className="lg:mt-24 lg:w-[30%] lg:px-8">
             <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
-              <Image src={philip.image} alt={philip.name} fill sizes="240px" className={`${portraitClass} ${philip.objectPosition}`} />
+              <Image src={juliana.image} alt={juliana.name} fill sizes="240px" className={`${portraitClass} ${juliana.objectPosition}`} />
             </div>
-            <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{philip.name}</h3>
-            <p className={titleClass}>{philip.title}</p>
-            <p className={bodyClass}>{philip.body}</p>
+            <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{juliana.name}</h3>
+            <p className={titleClass}>{juliana.title}</p>
+            <p className={bodyClass}>{juliana.body}</p>
           </div>
 
-          {/* Peregrine — slight offset, bordered on left */}
+          {/* Peregrine: slight offset, bordered on left */}
           <div className="lg:mt-10 lg:w-[32%] lg:pl-12">
             <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
               <Image src={peregrine.image} alt={peregrine.name} fill sizes="240px" className={`${portraitClass} ${peregrine.objectPosition}`} />
@@ -94,8 +97,8 @@ export function PatronSaintsSection() {
 
         {/* Single section link */}
         <div className="mt-20 flex justify-end lg:mt-28">
-          <Link href="/saints" className="text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold">
-            All Saints →
+          <Link href="/feast-days" className="inline-block py-3 -my-3 text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold">
+            Their Feast Days →
           </Link>
         </div>
       </div>

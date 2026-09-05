@@ -23,7 +23,7 @@ export function SevenSorrowsSection() {
         </h2>
         <div className="my-8 h-px w-10 bg-gold/25" />
         <p className="max-w-md text-[15px] leading-[1.9] text-white/60 italic">
-          Meditation on these mysteries is not pious sentiment — it is a school of
+          Meditation on these mysteries is not pious sentiment. It is a school of
           compassion, teaching us to stand where Mary stood: beside the suffering,
           without turning away.
         </p>

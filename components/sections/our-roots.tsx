@@ -7,7 +7,7 @@ const categoryClass = "mb-4 font-display text-[11px] uppercase tracking-[0.5em] 
 
 export function OurRootsSection() {
   return (
-    <section className="bg-black">
+    <section id="our-story" className="scroll-mt-24 bg-black">
       {/* Section header */}
       <div className="mx-auto max-w-[1400px] px-8 pb-14 pt-20 sm:px-12 lg:px-16 lg:pt-28">
         <h2 className="font-display text-4xl font-normal tracking-wide text-white sm:text-5xl lg:text-6xl">
@@ -28,7 +28,7 @@ export function OurRootsSection() {
               Seven wealthy Florentine merchants withdrew from public life to live in prayer and penance, placing themselves under the protection of the Virgin Mary. Officially approved in 1256 as the Order of Friars Servants of Mary, their community drew lay men, women, and married couples from its earliest years.
             </p>
             <p className={`mb-8 ${bodyText}`}>
-              These early lay participants — oblates, confraternity members, and associates — lived ordinary city and family life while remaining spiritually bound to the friars. Varied by priory and held together by devotion to Our Lady of Sorrows, they are the direct ancestors of today's OSSM.
+              These early lay participants (oblates, confraternity members, and associates) lived ordinary city and family life while remaining spiritually bound to the friars. Varied by priory and held together by devotion to Our Lady of Sorrows, they are the direct ancestors of today's OSSM.
             </p>
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
@@ -46,7 +46,7 @@ export function OurRootsSection() {
               <p className={yearClass}>1424</p>
               <p className={categoryClass}>Formal Recognition</p>
               <p className={`mb-3 ${bodyText}`}>
-                Through the Bull <em>Sedis apostolicae providentia</em>, Pope Martin V officially recognized lay Servites as a structured Third Order — giving them a genuine ecclesial identity alongside the Third Orders of the Franciscans, Dominicans, Carmelites, and Augustinians.
+                Through the Bull <em>Sedis apostolicae providentia</em>, Pope Martin V officially recognized lay Servites as a structured Third Order, giving them a genuine ecclesial identity alongside the Third Orders of the Franciscans, Dominicans, Carmelites, and Augustinians.
               </p>
               <p className={bodyText}>
                 For the first time, lay people affiliated with the Servites held a defined place within the Church's life, with early forms of governance and a common name that spread across Europe in the centuries that followed.
@@ -71,7 +71,7 @@ export function OurRootsSection() {
                 The Second Vatican Council called for a renewal of lay vocations across all religious families. In response, the Servite Third Order was re-examined to better reflect modern lay life and a clearer identity within the broader Servite family.
               </p>
               <p className={`mb-8 ${bodyText}`}>
-                A new Rule of Life was approved by the Apostolic See in 1987 and, after further revision, definitively confirmed by the Holy See on 29 April 1995. The order was formally renamed the Secular Order of the Servants of Mary — the OSSM — a worldwide movement of lay men and women living in ordinary society, fully part of the Servite spiritual family.
+                A new Rule of Life was approved by the Apostolic See in 1987 and, after further revision, definitively confirmed by the Holy See on 29 April 1995. The order was formally renamed the Secular Order of the Servants of Mary, the OSSM, a worldwide movement of lay men and women living in ordinary society, fully part of the Servite spiritual family.
               </p>
             </div>
           </div>
@@ -82,10 +82,10 @@ export function OurRootsSection() {
       {/* CTA */}
       <div className="mx-auto max-w-[1400px] flex justify-end px-8 pb-16 sm:px-12 lg:px-16">
         <Link
-          href="/history"
-          className="inline-flex items-center gap-3 font-display text-sm tracking-[0.25em] text-gold/60 transition-colors hover:text-gold"
+          href="/contact"
+          className="-my-3 inline-flex items-center gap-3 py-3 font-display text-sm tracking-[0.25em] text-gold/60 transition-colors hover:text-gold"
         >
-          Explore the Full History
+          Contact Us
           <span className="text-base leading-none">→</span>
         </Link>
       </div>
