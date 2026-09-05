@@ -5,41 +5,66 @@ interface Saint {
   name: string;
   title: string;
   body: string;
+  feast: string;
   image: string;
   objectPosition: string;
 }
 
+/**
+ * In chronological order. Each entry is kept to two sentences: the section is
+ * meant to widen the picture of the Servite family, not to add reading.
+ */
 const saints: Saint[] = [
   {
     name: "The Seven Holy Founders",
     title: "Founders of the Servite Order",
-    body: "Seven wealthy Florentine laymen who withdrew from the world together to serve Our Lady, founding the Order in 1233. Canonised as one, the only collective canonisation in the Church.",
+    body: "Seven Florentine laymen who withdrew from the world together to serve Our Lady, founding the Order in 1233. Canonised as one, the only collective canonisation in the Church.",
+    feast: "17 February",
     image: "/images/servite-founders.jpeg",
+    objectPosition: "object-top",
+  },
+  {
+    name: "St. Philip Benizi",
+    title: "The Order's Second Founder",
+    body: "Fifth Prior General, who carried the Order across Europe and into the universities. Elected pope by acclamation, he fled to the hills until another was chosen.",
+    feast: "23 August",
+    image: "/images/benizi.jpg",
     objectPosition: "object-top",
   },
   {
     name: "St. Juliana Falconieri",
     title: "Foundress of the Servite Third Order",
-    body: "Niece of one of the Seven Holy Founders, Juliana received the habit from St. Philip Benizi and gathered the women of Florence into the Third Order, the root from which the Secular Order grew. Feast 19 June.",
+    body: "Niece of one of the Seven Founders, she received the habit from St. Philip Benizi. She gathered the women of Florence into the Third Order, the root from which the Secular Order grew.",
+    feast: "19 June",
     image: "/images/juliana-falconieri.jpg",
     objectPosition: "object-top",
   },
   {
     name: "St. Peregrine Laziosi",
     title: "Patron of the Sick & Suffering",
-    body: "Miraculously healed of cancer on the eve of amputation, Peregrine is the Order's great intercessor for the ill, bearing in his own body the compassion Mary showed at the Cross.",
+    body: "Healed of cancer on the eve of amputation, he is the Order's great intercessor for the ill. He bore in his own body the compassion Mary showed at the Cross.",
+    feast: "4 May",
     image: "/images/peregrine.jpg",
+    objectPosition: "object-top",
+  },
+  {
+    name: "St. Clelia Barbieri",
+    title: "Foundress of the Minim Sisters of Our Lady of Sorrows",
+    body: "She founded her community at twenty-three, among the poor of her village outside Bologna, and died at twenty-six. The Servite charism lived out at its most ordinary and its most complete.",
+    feast: "13 July",
+    image: "/images/clelia-barbieri.jpg",
     objectPosition: "object-top",
   },
 ];
 
-const portraitClass = "object-cover brightness-[0.5] saturate-[0.3]";
-const bodyClass = "text-[14px] leading-[1.8] text-white/78";
-const titleClass = "mb-4 text-[13px] italic leading-snug text-gold/65";
+/**
+ * The vertical offset each column carries on desktop, so the row keeps the
+ * staggered rhythm the section had when it held three saints. Index modulo the
+ * column count, so the pattern repeats down the grid.
+ */
+const stagger = ["lg:mt-0", "lg:mt-20", "lg:mt-8"];
 
 export function PatronSaintsSection() {
-  const [founders, juliana, peregrine] = saints;
-
   return (
     <section
       id="saints"
@@ -54,50 +79,47 @@ export function PatronSaintsSection() {
         <div className="mt-5 h-px w-10 bg-gold/20" />
         <p className="mt-8 max-w-md text-[15px] leading-[1.9] text-white/75">
           The canonised sons and daughters of the Servite family, each a living
-          icon of the Order's charism of prayer, fraternity, and compassionate
-          service.
+          icon of the Order&rsquo;s charism of prayer, fraternity, and
+          compassionate service.
         </p>
       </div>
 
-      {/* Three saints with vertical stagger */}
+      {/* Saints */}
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:gap-0">
-
-          {/* Founders: anchored top */}
-          <div className="lg:w-[38%] lg:pr-16">
-            <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
-              <Image src={founders.image} alt={founders.name} fill sizes="240px" className={`${portraitClass} ${founders.objectPosition}`} />
+        <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-24">
+          {saints.map((saint, index) => (
+            <div key={saint.name} className={stagger[index % stagger.length]}>
+              <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
+                <Image
+                  src={saint.image}
+                  alt={saint.name}
+                  fill
+                  sizes="240px"
+                  className={`object-cover brightness-[0.5] saturate-[0.3] ${saint.objectPosition}`}
+                />
+              </div>
+              <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">
+                {saint.name}
+              </h3>
+              <p className="mb-4 text-[13px] italic leading-snug text-gold/65">
+                {saint.title}
+              </p>
+              <p className="max-w-xs text-[14px] leading-[1.8] text-white/78">
+                {saint.body}
+              </p>
+              <p className="mt-4 text-[11px] uppercase tracking-[0.25em] text-white/30">
+                Feast {saint.feast}
+              </p>
             </div>
-            <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{founders.name}</h3>
-            <p className={titleClass}>{founders.title}</p>
-            <p className={`max-w-xs ${bodyClass}`}>{founders.body}</p>
-          </div>
-
-          {/* Juliana: pushed down */}
-          <div className="lg:mt-24 lg:w-[30%] lg:px-8">
-            <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
-              <Image src={juliana.image} alt={juliana.name} fill sizes="240px" className={`${portraitClass} ${juliana.objectPosition}`} />
-            </div>
-            <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{juliana.name}</h3>
-            <p className={titleClass}>{juliana.title}</p>
-            <p className={bodyClass}>{juliana.body}</p>
-          </div>
-
-          {/* Peregrine: slight offset, bordered on left */}
-          <div className="lg:mt-10 lg:w-[32%] lg:pl-12">
-            <div className="relative mb-7 h-60 w-60 overflow-hidden rounded-full">
-              <Image src={peregrine.image} alt={peregrine.name} fill sizes="240px" className={`${portraitClass} ${peregrine.objectPosition}`} />
-            </div>
-            <h3 className="mb-1 font-display text-xl font-normal leading-tight tracking-wide text-white">{peregrine.name}</h3>
-            <p className={titleClass}>{peregrine.title}</p>
-            <p className={bodyClass}>{peregrine.body}</p>
-          </div>
-
+          ))}
         </div>
 
         {/* Single section link */}
         <div className="mt-20 flex justify-end lg:mt-28">
-          <Link href="/feast-days" className="inline-block py-3 -my-3 text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold">
+          <Link
+            href="/feast-days"
+            className="inline-block py-3 -my-3 text-[11px] tracking-[0.25em] text-gold/60 uppercase transition-colors hover:text-gold"
+          >
             Their Feast Days →
           </Link>
         </div>

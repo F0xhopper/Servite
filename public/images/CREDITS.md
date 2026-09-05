@@ -20,6 +20,12 @@ Credit line to display if the image is used elsewhere:
 If the fraternity would rather not carry an attribution requirement, replace
 this file with a public-domain portrait and delete this section.
 
+## Patron saints
+
+| File | Source | Licence |
+|---|---|---|
+| `clelia-barbieri.jpg` | Photograph of St. Clelia Barbieri, via Wikimedia Commons (`File:Clelia Barbieri.jpg`), author unknown. | Public domain. **Small (268x384)** — soft on a high-density screen, like `peregrine.jpg` and `benizi.jpg` below. A larger portrait exists on Commons but is CC BY-SA 4.0, which would add a third attribution requirement to the site. |
+
 ## Life in the Order
 
 | File | Source | Licence |
