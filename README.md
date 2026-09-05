@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Secular Order of the Servants of Mary (OSSM)
 
-## Getting Started
-
-First, run the development server:
+The fraternity's website. Next.js 16 (App Router), Tailwind CSS 4, TypeScript.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # also prints the pre-launch checklist
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run build` warns about any placeholder still in place — the domain, the
+contact address, an unconfigured contact form. The warning is not fatal, so a
+preview deploy still builds, but it prints on every build so the one that goes
+live cannot slip out unnoticed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Three real pages; everything else in the navigation is an anchor into the
+homepage.
 
-## Learn More
+| Route | Source |
+|---|---|
+| `/` | `app/page.tsx`, composed from `components/sections/*` |
+| `/contact` | `app/contact/page.tsx` |
+| `/feast-days` | `app/feast-days/page.tsx`, from `lib/feast-days.ts` |
+| `/api/contact` | `app/api/contact/route.ts` — the contact form endpoint |
 
-To learn more about Next.js, take a look at the following resources:
+`sitemap.xml`, `robots.txt` and the Open Graph card are generated from
+`app/sitemap.ts`, `app/robots.ts` and `app/opengraph-image.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## The contact form
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`components/contact-form.tsx` posts JSON to `/api/contact`, which sends through
+[Resend](https://resend.com). Three outcomes, all handled:
 
-## Deploy on Vercel
+- **Configured.** The message is emailed to `CONTACT_TO_EMAIL`, with `Reply-To`
+  set to the visitor, so replying from the inbox reaches them directly.
+- **Not configured, or the network fails.** The route answers 503 and the form
+  opens the visitor's own mail client with the message already written. Nothing
+  is silently lost, and the page works before any of this is set up.
+- **Invalid.** Field-level errors come back and are shown against each input.
+  This happens whether or not sending is configured.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A honeypot field and a per-IP throttle (5 in 10 minutes) sit in front of the
+send. The throttle is in memory, so on a serverless host each instance counts
+separately — a speed bump, not a security control.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Setting up Resend
+
+1. Verify a **subdomain** in Resend — `send.yourdomain.org`, not the root
+   domain. A domain carries only one SPF record, so adding Resend's next to an
+   existing mail provider's on the root breaks authentication for both. A
+   subdomain gets its own SPF and DKIM and leaves the MX records of the real
+   mailbox untouched.
+2. Add the DNS records Resend gives you. Do not touch existing MX records.
+3. Set `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL` in the
+   hosting environment. See `.env.example`.
+4. Add a DMARC record once mail is arriving reliably.
+
+To use a hosted form service (Formspree, Web3Forms) instead, set
+`NEXT_PUBLIC_CONTACT_FORM_ENDPOINT` and skip all of the above; it bypasses
+`/api/contact` entirely.
+
+## Editing content
+
+| What | Where |
+|---|---|
+| Contact address | `lib/contact-details.ts` |
+| Upcoming events | `lib/events.ts` — empty by default; past dates drop off on their own |
+| Feast day calendar | `lib/feast-days.ts` |
+| Site name, description, canonical URL | `lib/site.ts` |
+| Image provenance and licences | `public/images/CREDITS.md` |
+
+Meeting times and places are deliberately not published anywhere on the site.
+Enquirers are given them by whoever answers their message.
+
+## Before launch
+
+- [ ] Set `NEXT_PUBLIC_SITE_URL` to the real domain.
+- [ ] Replace the contact email — `NEXT_PUBLIC_CONTACT_EMAIL`, or edit
+      `lib/contact-details.ts`. The placeholder is `info@ossm.org`.
+- [ ] Configure Resend, and send a test message through the live form.
+- [ ] Add any real events to `lib/events.ts`.
+- [ ] Confirm the feast day list with the fraternity — see the caveats at the
+      top of `lib/feast-days.ts`.
+- [ ] Trace the two images marked **Unverified** in `public/images/CREDITS.md`,
+      or replace them.
+
+`FEEDBACK-PLAN.md` records the stakeholder feedback this build came from and the
+questions still open with the client.

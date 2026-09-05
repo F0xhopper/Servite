@@ -1,15 +1,15 @@
 /**
- * Fraternity contact details, shared by the footer and the contact page.
+ * Fraternity contact details, shared by the footer, the contact page, and the
+ * fallback the contact form uses when email sending is unavailable.
  *
- * NOTE: these are still the placeholders the site launched with. Replace the
- * email address and the meeting details with the real ones before the site goes
- * to the new domain.
+ * Deliberately just the address. Meeting times and places are not published on
+ * the site — enquirers are given them by whoever answers their message.
+ *
+ * This is the address *shown* on the site, and it needs a mailbox or a
+ * forwarding rule behind it. Where the contact form actually delivers is
+ * CONTACT_TO_EMAIL, which is server-side and can be a different, private inbox.
  */
+
 export const contactDetails = {
-  email: "info@ossm.org",
-  meeting: {
-    when: "Second Sunday of each month",
-    time: "10:00 am",
-    place: "Parish Hall",
-  },
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@ossm.org.uk",
 } as const;

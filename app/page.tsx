@@ -7,12 +7,11 @@ import { PatronSaintsSection } from "@/components/sections/patron-saints";
 import { MarianQuoteSection } from "@/components/sections/marian-quote";
 import { EventsPreviewSection } from "@/components/sections/events-preview";
 import { FeastDaysPreviewSection } from "@/components/sections/feast-days-preview";
-// import { HowItBeginsSection } from "@/components/sections/how-it-begins";
 import { CtaBandSection } from "@/components/sections/cta-band";
-// import { SevenSorrowsSection } from "@/components/sections/seven-sorrows";
 
-// The feast days preview is computed from today's date; revalidate so the
-// homepage doesn't hold on to the build-day list.
+// The feast day preview and the events list are both computed from today's
+// date, so revalidate rather than letting the homepage hold on to the list as
+// it stood on the day of the build.
 export const revalidate = 3600;
 
 export default function Home() {
@@ -32,7 +31,6 @@ export default function Home() {
       <MarianQuoteSection />
       <EventsPreviewSection />
       <FeastDaysPreviewSection />
-      {/* <HowItBeginsSection /> */}
       <CtaBandSection />
     </>
   );

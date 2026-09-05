@@ -52,40 +52,26 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Fraternity details */}
+          {/* Contact */}
           <div>
             <p className="mb-5 font-display text-[10px] uppercase tracking-[0.45em] text-white/25">
-              Fraternity
+              Contact
             </p>
-            <div className="space-y-5 text-[14px] leading-relaxed text-white/40">
-              <div>
-                <p className="mb-1.5 font-display text-[10px] uppercase tracking-[0.3em] text-gold/30">
-                  Meeting Times
-                </p>
-                <p>{contactDetails.meeting.when}</p>
-                <p>
-                  {contactDetails.meeting.time} · {contactDetails.meeting.place}
-                </p>
-              </div>
-              <div>
-                <p className="mb-1.5 font-display text-[10px] uppercase tracking-[0.3em] text-gold/30">
-                  Contact
-                </p>
-                <a
-                  href={`mailto:${contactDetails.email}`}
-                  className="inline-block py-2 transition-colors hover:text-white/60"
+            <div className="text-[14px] leading-relaxed text-white/40">
+              <a
+                href={`mailto:${contactDetails.email}`}
+                className="inline-block py-2 transition-colors hover:text-white/60"
+              >
+                {contactDetails.email}
+              </a>
+              <p className="mt-2">
+                <Link
+                  href="/contact"
+                  className="inline-block py-2 text-gold/50 transition-colors hover:text-gold"
                 >
-                  {contactDetails.email}
-                </a>
-                <p className="mt-2">
-                  <Link
-                    href="/contact"
-                    className="inline-block py-2 text-gold/50 transition-colors hover:text-gold"
-                  >
-                    Contact us →
-                  </Link>
-                </p>
-              </div>
+                  Contact us →
+                </Link>
+              </p>
             </div>
           </div>
 

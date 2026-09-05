@@ -22,7 +22,7 @@ export function MarianQuoteSection() {
         {/* Quote: right */}
         <div className="flex-1 text-center lg:text-left">
           <blockquote className="font-display text-2xl font-normal leading-relaxed tracking-wide text-white sm:text-3xl lg:text-[2.5rem] lg:leading-relaxed">
-            "Where sorrow is deepest, there Mary stands. There, too, the Servant of Mary is called to remain."
+            &ldquo;Where sorrow is deepest, there Mary stands. There, too, the Servant of Mary is called to remain.&rdquo;
           </blockquote>
           <div className="mx-auto my-10 h-px w-8 bg-gold/20 lg:mx-0" />
           <p className="font-display text-[11px] uppercase tracking-[0.45em] text-white/25">

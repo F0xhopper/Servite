@@ -9,10 +9,18 @@ import {
   type UpcomingFeast,
 } from "@/lib/feast-days";
 
+const description =
+  "The feast days of the Servite calendar: Our Lady of Sorrows, the Seven Holy Founders, and the saints of the Order.";
+
 export const metadata: Metadata = {
   title: "Feast Days",
-  description:
-    "The feast days of the Servite calendar: Our Lady of Sorrows, the Seven Holy Founders, and the saints of the Order.",
+  description,
+  alternates: { canonical: "/feast-days" },
+  openGraph: {
+    title: "Feast Days | OSSM",
+    description,
+    url: "/feast-days",
+  },
 };
 
 // Keep the "next feast" marker fresh without rebuilding the site.

@@ -3,10 +3,20 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/contact-form";
 import { contactDetails } from "@/lib/contact-details";
 
+const description =
+  "Write to the Secular Order of the Servants of Mary with questions, to arrange a visit, or for a first conversation about the Order.";
+
 export const metadata: Metadata = {
   title: "Contact Us",
-  description:
-    "Write to the Secular Order of the Servants of Mary with questions, to arrange a visit, or for a first conversation about the Order.",
+  description,
+  alternates: { canonical: "/contact" },
+  // Set explicitly: a page inherits the parent's Open Graph block wholesale,
+  // so without this a shared link to the contact page previews as the homepage.
+  openGraph: {
+    title: "Contact Us | OSSM",
+    description,
+    url: "/contact",
+  },
 };
 
 const detailLabelClass =
@@ -49,19 +59,10 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <p className={detailLabelClass}>Meeting Times</p>
-              <p className="text-[15px] leading-[1.9] text-white/70">
-                {contactDetails.meeting.when}
-                <br />
-                {contactDetails.meeting.time} · {contactDetails.meeting.place}
-              </p>
-            </div>
-
-            <div>
               <p className={detailLabelClass}>Visiting</p>
               <p className="text-[15px] leading-[1.9] text-white/70">
-                Enquirers are welcome at any monthly gathering. Let us know
-                you are coming and we will look out for you.
+                Enquirers are always welcome. Write to us and we will tell you
+                where and when to find us, and look out for you when you come.
               </p>
             </div>
 
