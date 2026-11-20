@@ -33,12 +33,36 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <div className="mt-5 h-px w-10 bg-gold/20" />
-          <p className="mt-8 max-w-lg text-[15px] leading-[1.9] text-white/75">
-            We would be glad to hear from you. Whether you are simply curious
-            about the Servants of Mary or sense a call to the Secular Order,
-            write to us and someone will answer personally. There is nothing to
-            commit to in asking.
-          </p>
+          <div className="mt-8 flex max-w-xl flex-col gap-6 text-[15px] leading-[1.9] text-white/75">
+            <p className="font-display text-xl italic leading-relaxed tracking-wide text-white sm:text-2xl">
+              If your heart feels heavy, you are not alone.
+            </p>
+            <p>
+              There is a path being lit, lantern by lantern, leading to the
+              foot of the Cross &mdash; to a Mother who understands your
+              sorrow, and to a family who will walk with you.
+            </p>
+            <p>
+              You do not have to be perfect. Just bring the small light you
+              carry, and lay it down beside ours.
+            </p>
+            <p>
+              If your heart is stirring, please reach out. We will meet you
+              there.
+            </p>
+            <div className="mt-2">
+              <p className="italic text-white/60">With love and prayers,</p>
+              <p className="mt-1 font-display text-base tracking-wider text-white">
+                Debbie and Laura
+              </p>
+              <a
+                href={`mailto:${contactDetails.personalEmail}`}
+                className="mt-1 inline-block py-2 text-gold/80 transition-colors hover:text-gold"
+              >
+                {contactDetails.personalEmail}
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[3fr_2fr] lg:gap-20">

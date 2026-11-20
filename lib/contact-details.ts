@@ -12,4 +12,7 @@
 
 export const contactDetails = {
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@ossm.org.uk",
+  // Debbie's own address, shown under the welcome letter she and Laura sign on
+  // the contact page.
+  personalEmail: "debzsilman1@gmail.com",
 } as const;
